@@ -1,0 +1,8 @@
+---
+import { Image } from "astro:assets";
+const { imgSrc, alt } = Astro.props;
+---
+
+<div class="logo-item">
+  <Image src={imgSrc} alt={alt} loading="lazy" />
+</div>

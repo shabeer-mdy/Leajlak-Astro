@@ -1,0 +1,8 @@
+---
+const { img_src, alt } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="partners-card flex-card_full">
+  <Image src={img_src} alt={alt} loading="eager" />
+</div>

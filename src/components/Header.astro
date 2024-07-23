@@ -1,0 +1,197 @@
+---
+const { lang = "en" } = Astro.props;
+
+import { Image } from "astro:assets";
+import logo_white from "../images/logo 2 white.png";
+import logo_normal from "../images/logo 2.png";
+import english from "../images/flag/united-states.png";
+import arabic from "../images/flag/2027810-middle.png";
+const content = await import(`../data/${lang}.json`);
+const handleRedirect = (lang: string) => {
+  if (lang === "ar") {
+    return Astro.url.pathname.replace("ar", "en");
+  } else {
+    return Astro.url.pathname.replace("en", "ar");
+  }
+};
+---
+
+<header id="header">
+  <div
+    class="relative flex flex-row justify-between items-center max-w-7xl mx-auto px-10 sm:px-16 xl:px-20 h-16 lg:justify-between">
+    <a href="/en">
+      <Image
+        loading="eager"
+        id="logo-default"
+        class="header-logo"
+        src={logo_white}
+        alt="logo"
+      />
+      <Image
+        loading="eager"
+        id="logo-scrolled"
+        class="header-logo scrolled"
+        src={logo_normal}
+        alt="log"
+      />
+    </a>
+    <div class="text-white nav-list">
+      <div class="nav_item">
+        <a href={`/${lang}`} data-route={`/${lang}`}>{content.home}</a>
+      </div>
+      <div class="nav_item">
+        <a href={`/${lang}/about`} data-route={`/${lang}/about`}
+          >{content.about}</a
+        >
+      </div>
+      <div class="nav_item">
+        <a href={`/${lang}/contact`} data-route={`/${lang}/contact`}
+          >{content.contact}</a
+        >
+      </div>
+      <!-- Dropdown menu -->
+      <div
+        class="relative nav_item gap-2 items-center lg:justify-center cursor-pointer group"
+        id="dropdownHoverButton">
+        <div
+          class="inline-flex items-center gap-2 group-hover:text-primaryOrange">
+          <span class="">{content.solutions}</span>
+          <svg
+            class=""
+            width="10"
+            height="10"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"></path>
+          </svg>
+        </div>
+        <div
+          id="dropdownHover"
+          class="lg:absolute z-50 top-16 -left-1/2 hidden lg:flex lg:invisible lg:bg-white lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:shadow w-44 overflow-hidden">
+          <ul
+            class="text-sm text-gray-700 lg:px-4 lg:py-5 lg:space-y-4 space-y-2 mt-2 lg:mt-0">
+            <li class="lg:-translate-y-1/2 lg:opacity-0">
+              <a
+                href={`/${lang}/solutions/merchant-solutions`}
+                data-route={`/${lang}/solutions/merchant-solutions`}
+                aria-label="merchants">{content.for_merchants}</a
+              >
+            </li>
+            <li class="lg:-translate-y-1/2 lg:opacity-0 lg:delay-75">
+              <a
+                href={`/${lang}/solutions/3PL-solutions`}
+                data-route={`/${lang}/solutions/3PL-solutions`}
+                aria-label="logistics">{content.For_3PL_Companies}</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5 lg:items-start lg:flex-row">
+        <a href={`/${lang}/register`} class="button">{content.register} </a>
+        <a
+          href="https://app.4ulogistic.com/login"
+          target="”_blank”"
+          class="button">{content.log_in}</a
+        >
+      </div>
+      <div
+        class="relative h-full flex flex-col items-start lg:flex-row lg:items-center"
+        id="button-dropdown-menu">
+        <button
+          type="button"
+          class="inline-flex items-center justify-center lg:px-3 lg:py-3 rounded-md cursor-pointer gap-2 hover:text-primaryOrange">
+          {
+            () => {
+              if (lang === "en") {
+                return (
+                  <>
+                    <Image
+                      loading="eager"
+                      src={english}
+                      class="h-5 w-5 lg:h-6 lg:w-6 rounded-full"
+                      alt=""
+                    />
+                    <span>English</span>
+                  </>
+                );
+              } else {
+                return (
+                  <>
+                    <Image
+                      loading="eager"
+                      src={arabic}
+                      class="h-5 w-5 lg:h-6 lg:w-6 rounded-full"
+                      alt=""
+                    />
+                    <span>العربية</span>
+                  </>
+                );
+              }
+            }
+          }
+        </button>
+        <div
+          class="z-50 lg:absolute invisible opacity-0 lg:top-16 lg:-right-6 w-48 text-base list-none lg:bg-white rounded-lg lg:shadow"
+          id="language-dropdown-menu">
+          <ul class="font-medium text-black py-5 lg:px-4 space-y-4" role="none">
+            {
+              () => {
+                if (lang === "en") {
+                  return (
+                    <li class="lg:-translate-y-1/2 lg:opacity-0 lg:hover:text-primaryOrange lg:delay-75">
+                      <a
+                        href={`${handleRedirect("en")}`}
+                        class="hover:text-primaryOrange inline-flex items-center"
+                        role="menuitem">
+                        <img
+                          src="/src/images/flag/2027810-middle.png"
+                          class="h-5 w-5 rounded-full me-2"
+                          alt=""
+                        />
+                        Arabic
+                      </a>
+                    </li>
+                  );
+                }
+              }
+            }
+            {
+              () => {
+                if (lang === "ar") {
+                  return (
+                    <li class="lg:-translate-y-1/2 lg:opacity-0 lg:hover:text-primaryOrange">
+                      <a
+                        href={`${handleRedirect("ar")}`}
+                        class="hover:text-primaryOrange inline-flex items-center"
+                        role="menuitem">
+                        <img
+                          src="/src/images/flag/united-states.png"
+                          class="h-5 w-5 rounded-full me-2"
+                          alt=""
+                        />
+                        English
+                      </a>
+                    </li>
+                  );
+                }
+              }
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="menu-toggle block cursor-pointer lg:hidden">
+      <div id="burger" class="menu-burger burger-1"></div>
+      <div id="burger" class="menu-burger burger-2"></div>
+      <div id="burger" class="menu-burger burger-3"></div>
+    </button>
+  </div>
+</header>

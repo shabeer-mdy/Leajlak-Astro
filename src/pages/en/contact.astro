@@ -1,0 +1,197 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import house from "../../images/icons/carbon_home.png";
+import call from "../../images/icons/ph_phone-light.png";
+import contact from "../../images/icons/lets-icons_message-light.png";
+---
+
+<Layout title="Contact Us" lang="en">
+  <section id="contact-hero">
+    <div class="container section-container">
+      <div class="text-center py-32 space-y-3">
+        <h3
+          class="text-primaryOrange text-2xl md:text-4xl font-light tracking-xl">
+          Contact us
+        </h3>
+        <h2 class="text-4xl md:text-5xl text-white">
+          We'd Love to Hear From You!
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container section-container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-20 lg:gap-0">
+        <!-- contacts -->
+        <div
+          class="flex items-center flex-col text-center sm:flex-row gap-16 lg:flex-col lg:items-start sm:text-left lg:py-20">
+          <div class="space-y-2">
+            <h4 class="text-4xl font-bold">Get in Touch</h4>
+            <p class="lg:w-[60%] tracking-wider">
+              any questions? we would be happy to help you!
+            </p>
+          </div>
+          <div class="flex flex-col gap-7">
+            <div
+              class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start sm:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all hover:fill-white hover:text-white duration-300 group">
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 470 407"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M244.562 3.59378C241.79 1.4322 238.375 0.258301 234.859 0.258301C231.344 0.258301 227.929 1.4322 225.156 3.59378L0.625 178.672L20.0469 203.234L47.5 181.828V375.25C47.5165 383.533 50.8142 391.472 56.6712 397.329C62.5281 403.186 70.4671 406.484 78.75 406.5H391.25C399.533 406.484 407.472 403.186 413.329 397.329C419.186 391.472 422.483 383.533 422.5 375.25V181.969L449.953 203.375L469.375 178.813L244.562 3.59378ZM266.25 375.25H203.75V250.25H266.25V375.25ZM297.5 375.25V250.25C297.5 241.962 294.208 234.013 288.347 228.153C282.487 222.292 274.538 219 266.25 219H203.75C195.462 219 187.513 222.292 181.653 228.153C175.792 234.013 172.5 241.962 172.5 250.25V375.25H78.75V157.469L235 35.75L391.25 157.625V375.25H297.5Z"
+                ></path>
+              </svg>
+              <span class="text-sm sm:text-base"
+                >Al Muruj, Riyadh, Saudi Arabia</span
+              >
+            </div>
+            <div
+              class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start md:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all hover:fill-white hover:text-white duration-300 group">
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 384 384"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M366.793 263.086L274.528 221.738C270.347 219.947 265.786 219.227 261.257 219.643C256.728 220.059 252.374 221.598 248.59 224.121C248.207 224.369 247.841 224.643 247.496 224.941L199.274 265.957C198.773 266.23 198.216 266.382 197.647 266.403C197.077 266.423 196.511 266.311 195.992 266.074C164.996 251.113 132.887 219.199 117.867 188.633C117.617 188.122 117.487 187.561 117.487 186.992C117.487 186.424 117.617 185.862 117.867 185.352L159.02 136.523C159.316 136.163 159.589 135.784 159.84 135.391C162.328 131.592 163.831 127.233 164.213 122.708C164.595 118.183 163.844 113.635 162.028 109.473L120.973 17.3633C118.641 11.926 114.609 7.39147 109.482 4.44035C104.354 1.48923 98.4081 0.280691 92.5354 0.996113C67.0124 4.35151 43.5845 16.8855 26.6296 36.2559C9.67466 55.6263 0.352975 80.5075 0.406479 106.25C0.406479 259.18 124.821 383.594 277.75 383.594C303.492 383.643 328.371 374.32 347.74 357.366C367.11 340.412 379.645 316.986 383.004 291.465C383.718 285.62 382.526 279.7 379.605 274.587C376.684 269.474 372.191 265.44 366.793 263.086ZM277.75 360.156C137.75 360.156 23.844 246.25 23.844 106.25C23.7787 86.2096 31.012 66.8309 44.1925 51.7346C57.373 36.6383 75.599 26.8572 95.4651 24.2188H95.9143C96.7014 24.2335 97.4656 24.4856 98.1069 24.9422C98.7482 25.3988 99.2366 26.0384 99.508 26.7774L140.719 118.789C140.954 119.301 141.076 119.857 141.076 120.42C141.076 120.983 140.954 121.539 140.719 122.051L99.4885 170.996C99.1824 171.347 98.9017 171.719 98.6487 172.109C96.0687 176.048 94.5494 180.586 94.2381 185.284C93.9267 189.982 94.8337 194.681 96.8713 198.926C114.196 234.395 149.938 269.863 185.797 287.188C190.067 289.214 194.788 290.099 199.502 289.757C204.215 289.414 208.76 287.856 212.692 285.234C213.063 284.98 213.434 284.707 213.785 284.414L261.988 243.398C262.465 243.143 262.99 242.993 263.53 242.959C264.069 242.925 264.609 243.009 265.114 243.203L357.399 284.551C358.152 284.872 358.786 285.422 359.21 286.123C359.634 286.824 359.827 287.64 359.762 288.457C357.137 308.332 347.365 326.572 332.272 339.767C317.179 352.962 297.798 360.21 277.75 360.156Z"
+                ></path>
+              </svg>
+
+              <span class="text-sm sm:text-base">+966536767272</span>
+            </div>
+            <div
+              class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start md:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all stroke-black hover:stroke-white hover:text-white duration-300 group">
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 358 274"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M304 12H54.0002C30.9883 12 12.3335 30.6548 12.3335 53.6667V220.333C12.3335 243.345 30.9883 262 54.0002 262H304C327.012 262 345.667 243.345 345.667 220.333V53.6667C345.667 30.6548 327.012 12 304 12Z"
+                  stroke-width="24"></path>
+                <path
+                  d="M12.3335 74.5L160.375 148.521C166.158 151.411 172.535 152.915 179 152.915C185.465 152.915 191.842 151.411 197.625 148.521L345.667 74.5"
+                  stroke-width="24"></path>
+              </svg>
+
+              <span class="text-sm sm:text-base normal-case"
+                >Info@leajlak.com</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- form -->
+        <div class="lg:py-20">
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >First name</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="last_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Last name</label
+                >
+              </div>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="number"
+                name="number"
+                id="number"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=""
+                required
+              />
+              <label
+                for="number"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Phone number</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="email"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Email</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="text"
+                name="company"
+                id="company"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="company"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Company</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <textarea
+                minlength="10"
+                maxlength="255"
+                name="message"
+                id="message"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=" "
+                required></textarea>
+              <label
+                for="message"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Message</label
+              >
+            </div>
+            <button
+              type="submit"
+              class="bg-primaryOrange py-3 px-5 rounded-md text-white hover:bg-primaryOrange/80 duration-300"
+              >Submit</button
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div id="map" class="h-96 z-0"></div>
+  </section>
+  <script src="../../Script/map.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+</Layout>

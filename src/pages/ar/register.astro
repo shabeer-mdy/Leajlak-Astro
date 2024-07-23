@@ -1,0 +1,57 @@
+---
+import Button from "../../components/Button.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="التسجيل" lang="ar">
+  <section class="bg-darkGray">
+    <div class="container section-container">
+      <div class="py-10">
+        <h2 class="text-center text-white lg:text-5xl">اختر فئتك</h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container section-container">
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">شركات اللوجستيات</h4>
+          <p>
+            يمكن لنظام إدارة الطلبات في لاجلكتمكين شركات اللوجستيات من التغلب
+            على العقبات التشغيلية، وتعزيز الكفاءة، وتقديم خدمة استثنائية
+            لعملائها.
+          </p>
+          <Button link="registration/logistic-companies" text="انضم الآن" />
+        </div>
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">التجار</h4>
+          <p>
+            انضم إلى منصتنا اليوم واكتشف إدارة تسليم سلسة، وكفاءة متزايدة، ورضا
+            العملاء الفريد كن جزءًا من مستقبل اللوجستيات.
+          </p>
+          <Button link="registration/merchants" text="انضم الآن" />
+        </div>
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">السائقون</h4>
+          <p>
+            هل تبحث عن كسب دخل إضافي بجدول زمني مرن؟ انضم إلينا في لاجلك كرايدر
+            وكن جزءًا من فريق ديناميكي مكرس لتقديم خدمات توصيل فعالة.
+          </p>
+          <Button link="registration/drivers" text="انضم الآن" />
+        </div>
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">الموظفون</h4>
+          <p>
+            كن جزءًا من فريقنا المبتكر وساعد في إحداث ثورة في صناعة إدارة
+            التسليم خطوتك التالية في مسيرتك المهنية العظيمة تبدأ هنا!
+          </p>
+          <Button link="registration/employees" text="انضم الآن" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

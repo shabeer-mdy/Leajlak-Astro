@@ -1,0 +1,98 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="Registartion | Employees" lang="en">
+  <section
+    class="bg-[url('../images/bg/joinus-mobile.png')] lg:bg-[url('../images/bg/joinus.png')] bg-no-repeat bg-cover">
+    <div class="container section-container flex items-center">
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-36 py-12">
+        <div class="py-14 text-left space-y-5 lg:w-1/2">
+          <div>
+            <h3>we are hiring</h3>
+            <h2 class="text-white text-3xl lg:text-4xl">Join our team.</h2>
+          </div>
+          <p class="text-white">
+            Join our dynamic team and help shape the future of delivery
+            management your expertise and passion can make a difference with us!
+          </p>
+          <div class="space-y-2 visible" id="availability-div">
+            <label for="availability" class="text-white"
+              >available Positions:</label
+            >
+            <select
+              name="availability"
+              id="availability"
+              class="bg-white text-gray-900 text-sm rounded-lg border-0 outline-0 block w-full p-2.5"
+              required>
+              <option value="exist" disabled selected
+                >Pick available position</option
+              >
+              <option value="1">position 1</option>
+              <option value="2">position 2</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-center w-full lg:w-1/2 overflow-hidden">
+          <form action="" class="w-full duration-500" id="form">
+            <div class="text-white space-y-6">
+              <div class="space-y-2">
+                <label for="fullName">Full name:</label>
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  class="rounded-lg p-2.5 w-full border border-white text-black outline-0"
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="rounded-lg p-2.5 w-full border border-white text-black outline-0"
+                  required
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="message" class="">Your message:</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  minlength="10"
+                  maxlength="255"
+                  class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg border border-white outline-0"
+                  placeholder="Tell us more about yourself..."></textarea>
+              </div>
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-white"
+                  for="file_input">Upload your resume (PDF)</label
+                >
+                <input
+                  class="block w-full text-sm text-gray-500 border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
+                  id="file_input"
+                  type="file"
+                  accept="application/pdf"
+                />
+              </div>
+              <div class="pt-5">
+                <button
+                  type="submit"
+                  value="Submit"
+                  class="bg-primaryOrange py-3 px-5 rounded-lg hover:bg-primaryOrange/80 duration-300"
+                  >Submit</button
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

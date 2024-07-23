@@ -1,0 +1,269 @@
+---
+import Button from "../../../components/Button.astro";
+import CheckBox from "../../../components/CheckBox.astro";
+import InputComp from "../../../components/InputComp.astro";
+import WavesShape from "../../../components/WavesShape.astro";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="Registartion | Merchants" lang="en">
+  <section
+    class="relative bg-[url('../images/bg/merchant.png')] bg-no-repeat bg-cover">
+    <h1 class="text-4xl md:text-5xl text-white text-center py-52">
+      Optimize Your Deliveries Today!
+    </h1>
+    <WavesShape />
+  </section>
+  <section class="">
+    <div class="container section-container flex items-center justify-center">
+      <form
+        id="formStepper"
+        class="w-[500px] bg-lightGray rounded-t-lg overflow-hidden shadow-xl">
+        <!-- Progress -->
+        <div
+          class="flex items-center justify-evenly bg-white gap-x-5 sm:gap-x-10 py-4">
+          <!-- contact info -->
+          <div class="stepper active relative flex flex-col items-center">
+            <div
+              class="size-10 sm:size-12 rounded-full border border-black/10 bg-white flex items-center justify-center">
+              <svg
+                class="icon size-5 sm:size-7"
+                viewBox="0 0 27 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M25.9589 27.6953L25.9645 27.7061L25.9704 27.7167C25.9822 27.7383 25.9926 27.7672 25.9974 27.8019C26.0021 27.8366 26.0004 27.872 25.993 27.9047C25.9857 27.9368 25.9739 27.9616 25.9625 27.9787C25.9585 27.9727 25.9543 27.9655 25.9502 27.957L25.9446 27.9455L25.9388 27.9342C23.3468 22.9309 18.7106 19.8621 13.5 19.8621C8.28945 19.8621 3.65319 22.9309 1.06125 27.9342L1.05539 27.9455L1.04983 27.957C1.04569 27.9655 1.04147 27.9727 1.03746 27.9787C1.02604 27.9616 1.0143 27.9368 1.00702 27.9047C0.999599 27.872 0.997927 27.8366 1.00265 27.8019C1.00737 27.7672 1.01777 27.7383 1.02963 27.7167L1.03551 27.706L1.04114 27.6951C2.91268 24.0798 5.77282 21.5306 9.06631 20.3299L10.9242 19.6526L9.27749 18.5577C7.71153 17.5165 6.475 15.9156 5.779 13.9843C5.08285 12.0526 4.97275 9.91374 5.46834 7.90175C5.96387 5.89 7.03239 4.13514 8.48884 2.89548C9.94308 1.6577 11.704 1 13.5 1C15.296 1 17.0569 1.6577 18.5112 2.89548C19.9676 4.13514 21.0361 5.89 21.5317 7.90175C22.0273 9.91374 21.9172 12.0526 21.221 13.9843C20.525 15.9156 19.2885 17.5165 17.7225 18.5577L16.0766 19.6521L17.9334 20.3298C21.2272 21.532 24.0874 24.0814 25.9589 27.6953ZM5.23778 10.433L5.23778 10.434C5.24006 12.816 6.08726 15.1189 7.62208 16.8332C9.16012 18.5511 11.2707 19.5418 13.4988 19.5445H13.5C15.1604 19.5445 16.7727 18.9939 18.1328 17.9789C19.4912 16.9651 20.5346 15.5363 21.147 13.8849C21.7593 12.2337 21.9183 10.4221 21.6072 8.67521C21.2961 6.92827 20.5261 5.31019 19.3802 4.03029C18.2333 2.74927 16.7581 1.86207 15.1337 1.50117C13.5079 1.13996 11.8241 1.3267 10.301 2.03139C8.77983 2.73515 7.4978 3.91822 6.60352 5.41313C5.70964 6.90736 5.23778 8.654 5.23778 10.433Z"
+                  stroke-width="2"></path>
+              </svg>
+              <svg
+                class="tick size-5 sm:size-7 hidden"
+                viewBox="0 0 34 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+            <hr
+              class="absolute hidden sm:block -right-20 top-6 border-black/20 border-2 w-full"
+            />
+            <p class="text-sm sm:text-base text-center">Contact Info</p>
+          </div>
+          <!-- general info -->
+          <div class="stepper relative flex flex-col items-center">
+            <div
+              class="size-10 sm:size-12 rounded-full border border-black/10 bg-white flex items-center justify-center">
+              <svg
+                class="icon size-5 sm:size-7"
+                viewBox="0 0 31 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.64946 1.9751L26.4992 24.7961C26.9517 25.2292 27.2059 25.8165 27.2059 26.4289C27.2059 27.0413 26.9517 27.6286 26.4992 28.0617C26.0465 28.4945 25.4328 28.7377 24.7928 28.7377C24.1529 28.7377 23.5391 28.4945 23.0864 28.0617L17.2604 22.3909C16.8792 22.0205 16.6653 21.5215 16.6649 21.0016V20.6591C16.6649 20.3965 16.6105 20.1366 16.5047 19.8944C16.3989 19.6522 16.2439 19.4325 16.0486 19.248L15.2964 18.5834C15.0411 18.358 14.7306 18.1976 14.3935 18.1171C14.0564 18.0365 13.7035 18.0384 13.3674 18.1226C12.8373 18.2549 12.2803 18.2524 11.7516 18.1152C11.2229 17.9779 10.7409 17.7108 10.3534 17.3403L4.8232 12.048C1.54252 8.9088 0.33524 4.16844 2.64946 1.9751Z"
+                  stroke-width="2"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M24.8213 1L19.8207 5.78496C19.4359 6.15309 19.1306 6.59015 18.9224 7.07117C18.7141 7.55219 18.6069 8.06776 18.6069 8.58843V9.50887C18.6069 9.6391 18.5801 9.76806 18.5281 9.88837C18.476 10.0087 18.3996 10.118 18.3033 10.21L17.5712 10.9106M19.6427 12.8927L20.3748 12.1922C20.471 12.1001 20.5852 12.027 20.711 11.9771C20.8367 11.9273 20.9715 11.9016 21.1076 11.9017H22.0695C22.6136 11.9017 23.1525 11.7991 23.6552 11.5998C24.1579 11.4006 24.6146 11.1085 24.9993 10.7403L30 5.9553M27.4107 3.47765L22.232 8.43295M11.8747 21.8123L5.41944 28.0237C4.93387 28.4882 4.27538 28.7492 3.58878 28.7492C2.90218 28.7492 2.24369 28.4882 1.75812 28.0237C1.2727 27.5591 1 26.929 1 26.272C1 25.6151 1.2727 24.985 1.75812 24.5203L7.21385 19.3346"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <svg
+                class="tick size-5 sm:size-7 hidden"
+                viewBox="0 0 34 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+            <p class="text-sm sm:text-base text-center">general Info</p>
+            <hr
+              class="absolute hidden sm:block -right-20 top-6 border-black/20 border-2 w-full"
+            />
+          </div>
+          <!-- branch info -->
+          <div class="stepper relative flex flex-col items-center">
+            <div
+              class="size-10 sm:size-12 rounded-full border border-black/10 bg-white flex items-center justify-center">
+              <svg
+                class="icon size-5 sm:size-7"
+                viewBox="0 0 27 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 7.5L6.47576 1.767C6.70678 1.52368 6.98151 1.33064 7.28412 1.199C7.58673 1.06736 7.91124 0.999729 8.23893 1H18.5944C18.9221 0.999729 19.2466 1.06736 19.5492 1.199C19.8519 1.33064 20.1266 1.52368 20.3576 1.767L25.8334 7.5M3.48334 14V24.4C3.48334 25.0896 3.74497 25.7509 4.21069 26.2385C4.67641 26.7261 5.30805 27 5.96667 27H20.8667C21.5253 27 22.157 26.7261 22.6227 26.2385C23.0884 25.7509 23.35 25.0896 23.35 24.4V14"
+                  stroke="#EC6131"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M17.1417 26.9995V21.7995C17.1417 21.1099 16.8801 20.4486 16.4143 19.961C15.9486 19.4734 15.317 19.1995 14.6584 19.1995H12.175C11.5164 19.1995 10.8848 19.4734 10.419 19.961C9.95332 20.4486 9.69168 21.1099 9.69168 21.7995V26.9995M1 7.49951H25.8334V11.3995C25.8334 12.0891 25.5717 12.7504 25.106 13.238C24.6403 13.7256 24.0087 13.9995 23.35 13.9995C22.6246 13.9577 21.9317 13.6703 21.3758 13.1805C21.2276 13.0684 21.0495 13.0081 20.8667 13.0081C20.6839 13.0081 20.5058 13.0684 20.3576 13.1805C19.8017 13.6703 19.1088 13.9577 18.3834 13.9995C17.6579 13.9577 16.965 13.6703 16.4091 13.1805C16.261 13.0684 16.0828 13.0081 15.9 13.0081C15.7172 13.0081 15.5391 13.0684 15.3909 13.1805C14.835 13.6703 14.1422 13.9577 13.4167 13.9995C12.6912 13.9577 11.9984 13.6703 11.4424 13.1805C11.2943 13.0684 11.1161 13.0081 10.9333 13.0081C10.7506 13.0081 10.5724 13.0684 10.4243 13.1805C9.86833 13.6703 9.17548 13.9577 8.45001 13.9995C7.72455 13.9577 7.03169 13.6703 6.47576 13.1805C6.3276 13.0684 6.14947 13.0081 5.96667 13.0081C5.78388 13.0081 5.60575 13.0684 5.45759 13.1805C4.90166 13.6703 4.2088 13.9577 3.48334 13.9995C2.82472 13.9995 2.19307 13.7256 1.72735 13.238C1.26164 12.7504 1 12.0891 1 11.3995V7.49951Z"
+                  stroke="#EC6131"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <svg
+                class="tick size-5 sm:size-7 hidden"
+                viewBox="0 0 34 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+            <p class="text-sm sm:text-base text-center">branch Info</p>
+          </div>
+        </div>
+        <!-- form -->
+        <div class="px-5 sm:px-20 py-10">
+          <!-- Contact info -->
+          <div class="form-elements active space-y-6">
+            <InputComp
+              type="text"
+              id="contactName"
+              bg="bg-lightGray"
+              lable_text="Point Of Contact Name"
+              data_needed={true}
+            />
+            <InputComp
+              type="email"
+              id="contactEmail"
+              bg="bg-lightGray"
+              lable_text="Contact Email"
+              data_needed={true}
+            />
+            <InputComp
+              type="number"
+              id="contactNumber"
+              bg="bg-lightGray"
+              lable_text="Contact Number"
+              data_needed={true}
+            />
+            <div class="flex justify-between">
+              <button
+                type="button"
+                id="next"
+                class="bg-primaryOrange px-5 py-3 text-white rounded-md hover:bg-primaryOrange/80 hover:shadow-md duration-300"
+                >Next</button
+              >
+            </div>
+            <p class="mt-10 text-sm font-thin">
+              please note that: (<span class="text-red-700">*</span>) fields are
+              mandatory, <br /> regular fields are optional.
+            </p>
+          </div>
+          <!-- general info -->
+          <div class="form-elements space-y-6">
+            <InputComp
+              type="text"
+              id="companyName"
+              bg="bg-lightGray"
+              lable_text="Company Name"
+              data_needed={true}
+            />
+            <InputComp
+              type="text"
+              id="company_website"
+              bg="bg-lightGray"
+              lable_text="company website"
+            />
+            <div class="space-y-2">
+              <p>Industry type <span class="text-red-700">*</span></p>
+              <CheckBox id="food1" label_text="type 1" />
+              <CheckBox id="food2" label_text="type 2" />
+              <CheckBox id="food n" label_text="type n" />
+            </div>
+            <InputComp
+              type="text"
+              id="location_link"
+              bg="bg-lightGray"
+              lable_text="Head office location (link)"
+            />
+            <div class="flex justify-between">
+              <button
+                type="button"
+                id="return"
+                class="bg-gray-500 px-5 py-3 text-white rounded-md hover:bg-gray-500/80 hover:shadow-md duration-300">
+                Return
+              </button>
+              <button
+                type="button"
+                id="next"
+                class="bg-primaryOrange px-5 py-3 text-white rounded-md hover:bg-primaryOrange/80 hover:shadow-md duration-300"
+                >Next</button
+              >
+            </div>
+          </div>
+          <!-- branch info -->
+          <div class="form-elements space-y-6">
+            <InputComp
+              type="number"
+              id="branch_numbers"
+              bg="bg-lightGray"
+              lable_text="Number of branches"
+              data_needed={true}
+            />
+            <div class="space-y-2">
+              <p>
+                Service Providing Regions <span class="text-red-700">*</span>
+              </p>
+              <CheckBox id="food1" label_text="region 1" />
+              <CheckBox id="food2" label_text="region 2" />
+              <CheckBox id="food n" label_text="region 3" />
+            </div>
+            <div class="space-y-2">
+              <p>
+                Average Daily Order Volume/ Branch <span class="text-red-700"
+                  >*</span
+                >
+              </p>
+              <select
+                name="volume"
+                id="volume"
+                class="bg-lightGray border border-gray-400 text-gray-400 text-base rounded-lg outline-0 block w-full px-2.5 py-3"
+                required>
+                <option value="1">type 1</option>
+                <option value="2">type 2</option>
+                <option value="3">type 3</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <p>
+                Select your POS System <span class="text-red-700">*</span>
+              </p>
+              <select
+                name="volume"
+                id="volume"
+                class="bg-lightGray border border-gray-400 text-gray-400 text-base rounded-lg outline-0 block w-full px-2.5 py-3"
+                required>
+                <option value="1">type 1</option>
+                <option value="2">type 2</option>
+                <option value="3">type 3</option>
+              </select>
+            </div>
+            <div class="flex justify-between">
+              <button
+                type="button"
+                id="return"
+                class="bg-gray-500 px-5 py-3 text-white rounded-md hover:bg-gray-500/80 hover:shadow-md duration-300">
+                Return
+              </button>
+              <button
+                type="submit"
+                id="submit"
+                class="bg-primaryOrange px-5 py-3 text-white rounded-md hover:bg-primaryOrange/80 hover:shadow-md duration-300"
+                >Submit</button
+              >
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="../../../Script/registration-merchant.js"></script>
+</Layout>

@@ -1,0 +1,49 @@
+---
+
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".carousel-item");
+    let currentItem = 0;
+    let carouselInterval;
+
+    function showItem(index) {
+      items[currentItem].classList.remove("active");
+      currentItem = index;
+      items[currentItem].classList.add("active");
+    }
+
+    function showNextItem() {
+      const nextIndex = (currentItem + 1) % items.length;
+      showItem(nextIndex);
+    }
+
+    function showPrevItem() {
+      const prevIndex = (currentItem - 1 + items.length) % items.length;
+      showItem(prevIndex);
+    }
+
+    function resetInterval() {
+      clearInterval(carouselInterval);
+      carouselInterval = setInterval(showNextItem, 5000);
+    }
+
+    document
+      .querySelector(".carousel-control-next")
+      .addEventListener("click", function () {
+        showNextItem();
+        resetInterval();
+      });
+
+    document
+      .querySelector(".carousel-control-prev")
+      .addEventListener("click", function () {
+        showPrevItem();
+        resetInterval();
+      });
+
+    // Initialize the interval
+    carouselInterval = setInterval(showNextItem, 5000);
+  });
+</script>

@@ -1,0 +1,167 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import house from "../../images/icons/carbon_home.png";
+import call from "../../images/icons/ph_phone-light.png";
+import contact from "../../images/icons/lets-icons_message-light.png";
+---
+
+<Layout title="اتصل بنا" lang="ar">
+  <section id="contact-hero">
+    <div class="container section-container">
+      <div class="text-center py-32 space-y-3">
+        <h3 class="text-primaryOrange text-2xl md:text-4xl font-light">
+          اتصل بنا
+        </h3>
+        <h2 class="text-4xl md:text-5xl text-white">نحن متشوقون لسماع رأيك!</h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container section-container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-20 lg:gap-0">
+        <!-- contacts -->
+        <div
+          class="flex items-center flex-col text-center sm:flex-row gap-16 lg:flex-col lg:items-start sm:text-left lg:py-20">
+          <div class="space-y-2">
+            <h4 class="text-4xl font-bold text-right">اتصل بنا</h4>
+            <p class="lg:w-[60%] text-right">
+              هل لديك أي أسئلة؟ سنكون سعداء بمساعدتك!
+            </p>
+          </div>
+          <div class="flex flex-col gap-7">
+            <div
+              class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start sm:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all hover:fill-white hover:text-white duration-300 group">
+              <!-- Replace SVG with appropriate icon -->
+              <span class="text-sm sm:text-base"
+                >المرج، الرياض، المملكة العربية السعودية</span
+              >
+            </div>
+            <div
+              class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start md:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all hover:fill-white hover:text-white duration-300 group">
+              <!-- Replace SVG with appropriate icon -->
+              <span class="text-sm sm:text-base">+966536767272</span>
+            </div>
+            <div
+              class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start md:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all stroke-black hover:stroke-white hover:text-white duration-300 group">
+              <!-- Replace SVG with appropriate icon -->
+              <span class="text-sm sm:text-base normal-case"
+                >Info@لاجلك.com</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- form -->
+        <div class="lg:py-20">
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >الاسم الأول</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="last_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >الاسم الأخير</label
+                >
+              </div>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="number"
+                name="number"
+                id="number"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=""
+                required
+              />
+              <label
+                for="number"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >رقم الهاتف</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="email"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >البريد الإلكتروني</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="text"
+                name="company"
+                id="company"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="company"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >الشركة</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <textarea
+                minlength="10"
+                maxlength="255"
+                name="message"
+                id="message"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
+                placeholder=" "
+                required></textarea>
+              <label
+                for="message"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >الرسالة</label
+              >
+            </div>
+            <button
+              type="submit"
+              class="bg-primaryOrange py-3 px-5 rounded-md text-white hover:bg-primaryOrange/80 duration-300"
+              >إرسال</button
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div id="map" class="h-96 z-0"></div>
+  </section>
+  <script src="../../Script/map.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+</Layout>

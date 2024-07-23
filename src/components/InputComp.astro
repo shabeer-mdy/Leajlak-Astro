@@ -1,0 +1,51 @@
+---
+const { type, id, bg, lable_text, data_needed } = Astro.props;
+const { lang = "en" } = Astro.props;
+let direction = "left-3";
+if (lang === "ar") {
+  direction = "right-3";
+}
+---
+
+<div class="relative">
+  <input
+    type={type}
+    name={id}
+    id={id}
+    class:list={[
+      "block rounded-lg px-2.5 pb-2.5 pt-4 w-full text-black outline-0 border border-gray-400 appearance-none peer",
+      bg,
+    ]}
+    placeholder=""
+  />
+  <label
+    for={id}
+    class=`absolute text-sm sm:text-base text-gray-400 duration-300 transform -translate-y-4 scale-75 top-1 ${direction} z-10 px-2 origin-[0] bg-lightGray peer-focus:px-2 peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-4 start-1`
+    >{lable_text}{
+      () => {
+        if (data_needed === true) {
+          return <span class="text-red-700"> *</span>;
+        } else {
+          return <span />;
+        }
+      }
+    }
+  </label>
+  {
+    () => {
+      if (lang === "en") {
+        return (
+          <p class="error-message text-red-700 mt-1 hidden">
+            This field must not be empty
+          </p>
+        );
+      } else {
+        return (
+          <p class="error-message text-red-700 mt-1 hidden">
+            يجب ألا يكون هذا الحقل فارغاً
+          </p>
+        );
+      }
+    }
+  }
+</div>

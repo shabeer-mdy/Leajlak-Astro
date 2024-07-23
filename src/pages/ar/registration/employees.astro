@@ -1,0 +1,95 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="التسجيل | موظفين" lang="ar"
+  ><section
+    class="bg-[url('../images/bg/joinus-mobile.png')] lg:bg-[url('../images/bg/joinus.png')] bg-no-repeat bg-cover">
+    <div class="container section-container flex items-center">
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-36 py-12">
+        <div class="py-14 text-right space-y-5 lg:w-1/2">
+          <div>
+            <h3>نحن نوظف</h3>
+            <h2 class="text-white text-3xl lg:text-4xl">انضم إلى فريقنا.</h2>
+          </div>
+          <p class="text-white">
+            انضم إلى فريقنا الديناميكي وساهم في تشكيل مستقبل إدارة التوصيل.
+            خبرتك وشغفك يمكن أن يحدث فرقاً معنا!
+          </p>
+          <div class="space-y-2 visible" id="availability-div">
+            <label for="availability" class="text-white">الوظائف المتاحة:</label
+            >
+            <select
+              name="availability"
+              id="availability"
+              class="bg-white text-gray-900 text-sm rounded-lg border-0 outline-0 block w-full p-2.5"
+              required>
+              <option value="exist" disabled selected>اختر وظيفة متاحة</option>
+              <option value="1">الوظيفة 1</option>
+              <option value="2">الوظيفة 2</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-center w-full lg:w-1/2 overflow-hidden">
+          <form action="" class="w-full duration-500" id="form">
+            <div class="text-white space-y-6">
+              <div class="space-y-2">
+                <label for="fullName">الاسم الكامل:</label>
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  class="rounded-lg p-2.5 w-full border border-white text-black outline-0"
+                  placeholder="اسمك الكامل"
+                  required
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="email">البريد الإلكتروني:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="rounded-lg p-2.5 w-full border border-white text-black outline-0"
+                  required
+                  placeholder="بريدك الإلكتروني"
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="message" class="">رسالتك:</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  minlength="10"
+                  maxlength="255"
+                  class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg border border-white outline-0"
+                  placeholder="أخبرنا المزيد عن نفسك..."></textarea>
+              </div>
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-white"
+                  for="file_input">تحميل سيرتك الذاتية (PDF)</label
+                >
+                <input
+                  class="block w-full text-sm text-gray-500 border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
+                  id="file_input"
+                  type="file"
+                  accept="application/pdf"
+                />
+              </div>
+              <div class="pt-5">
+                <button
+                  type="submit"
+                  value="Submit"
+                  class="bg-primaryOrange py-3 px-5 rounded-lg hover:bg-primaryOrange/80 duration-300"
+                  >إرسال</button
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

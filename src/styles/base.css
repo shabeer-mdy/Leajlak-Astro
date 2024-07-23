@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Hanimation";
+    src: url("/src/fonts/Hanimation_Arabic_Regular.otf") format("otf");
+  }
+}
+
+html[lang="ar"] {
+  direction: rtl;
+}
+
+img,
+video {
+  max-width: none !important;
+  height: none !important;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  @apply bg-lightGray;
+  text-transform: capitalize;
+  overflow-x: hidden;
+}
+
+.section-container {
+  @apply relative max-w-7xl mx-auto px-6 lg:px-20 py-24 min-h-full;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: -1;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  @apply text-3xl md:text-4xl font-bold tracking-wide leading-10 text-darkGray;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  @apply font-medium text-primaryOrange text-2xl md:text-3xl;
+}
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  @apply text-black/70 leading-7;
+}
+
+.header-logo {
+  @apply lg:w-32 w-24;
+}
+
+.header-logo.scrolled {
+  @apply hidden;
+}
+
+header {
+  @apply fixed top-0 w-full z-50 py-2  bg-transparent;
+}
+
+header.scrolled {
+  @apply bg-white duration-500 ease-out shadow-md;
+}
+
+header.scrolled div {
+  @apply text-black;
+}
+
+.nav-list {
+  @apply fixed right-0 top-0 flex opacity-0 justify-start items-start p-20 flex-col w-full h-full -translate-x-full duration-500 font-semibold space-y-5 lg:opacity-100 lg:translate-x-0 lg:space-y-0 lg:relative lg:top-0 lg:flex-row lg:gap-x-6 lg:w-auto lg:h-full lg:items-center lg:justify-center lg:p-0;
+}
+
+.nav-list.open {
+  @apply translate-x-0 h-full bg-white text-black opacity-100 lg:bg-transparent lg:text-white;
+}
+
+.nav-list > div {
+  @apply opacity-0 lg:opacity-100;
+}
+
+.nav-list.open > div {
+  opacity: 1;
+}
+
+.nav-list > a {
+  @apply opacity-0 lg:opacity-100;
+}
+
+.nav-list.open > a {
+  @apply opacity-100;
+}
+
+.nav_item {
+  @apply lg:relative pb-1 border-b-2 w-full lg:border-b-0 lg:pb-0 lg:w-auto lg:h-full lg:flex lg:items-center lg:justify-center;
+}
+
+.nav_item:hover,
+.nav_item a:hover,
+.nav_item a.active {
+  @apply text-primaryOrange duration-300;
+}
+
+.nav-list > .nav_item > a.active::after {
+  content: "";
+  @apply lg:absolute bottom-[15px] left-1/2 bg-primaryOrange h-[5px] w-[5px] rounded-[50%] duration-300;
+}
+
+#dropdownHoverButton.active #dropdownHover {
+  @apply visible flex;
+}
+
+#dropdownHoverButton.active svg {
+  @apply rotate-180 transition-transform duration-300;
+}
+
+#dropdownHoverButton svg {
+  @apply rotate-0 transition-transform duration-300;
+}
+
+#dropdownHoverButton #dropdownHover a.active {
+  @apply text-primaryOrange;
+}
+
+#language-dropdown-menu.active li {
+  @apply lg:translate-y-0 lg:opacity-100 ease-out duration-500;
+}
+
+#language-dropdown-menu.active {
+  @apply visible opacity-100;
+}
+
+#dropdownHoverButton.active #dropdownHover li {
+  @apply lg:translate-y-0 lg:opacity-100 ease-out duration-500;
+}
+
+.menu-toggle {
+  @apply relative h-6 w-6 bg-none cursor-pointer;
+}
+
+.menu-burger {
+  @apply absolute left-0 w-full h-[2px] bg-primaryOrange transition-all duration-300 ease-in;
+}
+
+.burger-1 {
+  @apply top-[2px];
+}
+
+.burger-2 {
+  @apply top-[10px];
+}
+
+.burger-3 {
+  @apply top-[18px];
+}
+
+.burger-1.burger-active {
+  @apply top-[10px] rotate-45;
+}
+
+.burger-2.burger-active {
+  @apply hidden;
+}
+
+.burger-3.burger-active {
+  @apply top-[10px] -rotate-45;
+}
+
+.button {
+  @apply relative border-2 border-primaryOrange text-primaryOrange rounded-md px-5 py-2 hover:bg-primaryOrange hover:text-white duration-200;
+}
+
+a:hover #arrow {
+  @apply translate-x-2 duration-300;
+}
+
+#arrow {
+  @apply translate-x-0 duration-300;
+}
+
+#moreFeatures {
+  @apply bg-lightGray;
+}
+
+@media (max-width: 1024px) {
+  #nav-items a.active {
+    @apply text-white bg-primaryOrange;
+  }
+
+  #nav-items a.active::after {
+    display: none;
+  }
+}
+
+#Benfits {
+  @apply bg-white;
+}
+
+.benfits-list {
+  @apply flex flex-row items-center;
+}
+
+li svg {
+  @apply w-7 h-7 mr-4 fill-white lg:fill-black;
+}
+
+.carousel {
+  @apply relative flex items-center justify-center overflow-hidden h-[350px] w-full;
+}
+.carousel-item {
+  @apply hidden text-center p-5;
+}
+
+.carousel-item.active {
+  @apply block;
+}
+
+.carousel-controls {
+  @apply absolute top-1/2 w-full flex justify-between;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  @apply text-2xl p-3 cursor-pointer hover:scale-125 duration-500;
+}
+
+/* Customers */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500px);
+  }
+}
+.logo-track {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+  column-gap: 100px;
+  animation: scroll 5s linear 0s infinite normal none;
+}
+.logo-track:hover {
+  animation-play-state: paused;
+}
+.logo-item {
+  @apply w-[100px] flex items-center flex-shrink-0 flex-grow-0 select-none;
+}
+.logo-item img {
+  @apply w-full block pointer-events-none;
+}
+
+/* Partners */
+
+#Partners {
+  @apply bg-white;
+}
+
+.partners-card {
+  @apply flex items-center justify-center h-[170px];
+}
+
+.partners-card img {
+  @apply w-[100px] h-auto  contrast-100 brightness-100 saturate-0 blur-0 hue-rotate-0 hover:filter-none duration-200;
+}
+
+.home-cta {
+  background: rgb(236, 97, 49);
+  background: -moz-linear-gradient(
+    52deg,
+    rgba(236, 97, 49, 1) 20%,
+    rgba(255, 179, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    52deg,
+    rgba(236, 97, 49, 1) 20%,
+    rgba(255, 179, 0, 1) 100%
+  );
+  background: linear-gradient(
+    52deg,
+    rgba(236, 97, 49, 1) 20%,
+    rgba(255, 179, 0, 1) 100%
+  );
+}
+
+/* Footer */
+
+.socials {
+  @apply fill-white hover:fill-white/80 w-5 h-5 md:w-6 md:h-6;
+}
+
+/* Solutions */
+
+#merchant-hero {
+  background-image: url("../images/bg/restaurant-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.card-solution {
+  @apply flex flex-col items-center justify-center gap-y-10 text-center p-5 h-[500px] filter grayscale  bg-white rounded-md hover:shadow-Cxl hover:grayscale-0 duration-300 lg:flex-card_solution_md;
+}
+.card-solution svg {
+  @apply w-20 h-20 fill-primaryOrange;
+}
+#Solutions-cta {
+  background-image: url("../images/bg/digital-bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.benefits-card {
+  @apply flex flex-col items-center justify-center relative lg:flex-row;
+}
+
+#logisitc-hero {
+  background-image: url("../images/bg/fleet-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#contact-hero {
+  background-image: url("../images/bg/riyadh.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.custom-shape-divider-bottom-1720992718 {
+  @apply -mb-px absolute bottom-0 left-0 w-full overflow-hidden leading-[0px] rotate-180;
+}
+
+.custom-shape-divider-bottom-1720992718 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 90px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1720992718 .shape-fill {
+  @apply fill-lightGray;
+}
+
+#register div > img {
+  @apply w-40 h-36 lg:w-44;
+}
+
+input[type="file"]::file-selector-button {
+  @apply bg-primaryOrange border-0 cursor-pointer text-white py-2;
+}
+
+/* Stepper */
+
+@keyframes animate {
+  from {
+    @apply scale-0 opacity-0;
+  }
+  to {
+    @apply scale-100 opacity-100;
+  }
+}
+
+.form-elements {
+  @apply hidden;
+  animation: animate 0.5s;
+}
+
+.form-elements svg {
+  @apply bg-black/10;
+}
+
+.form-elements.active {
+  @apply block;
+}
+
+.stepper.active div {
+  @apply border-primaryOrange border-2 duration-300;
+}
+
+.stepper svg {
+  @apply stroke-primaryOrange;
+}
+
+.stepper.active p {
+  @apply text-primaryOrange duration-300;
+}
+
+.stepper.done div {
+  @apply bg-primaryOrange duration-300;
+}
+
+.stepper.done .icon {
+  @apply hidden;
+}
+
+.stepper.done .tick {
+  @apply block;
+}
+
+.stepper.done hr {
+  @apply border-primaryOrange  duration-300;
+}
+
+label {
+  @apply peer-placeholder-shown:top-[30%];
+}
+
+.error {
+  @apply border-red-700;
+}
+.fourofour {
+  @apply bg-black;
+}

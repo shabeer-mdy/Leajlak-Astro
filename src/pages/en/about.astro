@@ -1,0 +1,188 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import team_member from "../../images/profile-pic/team-member.png";
+import { Image } from "astro:assets";
+import PartnersCard from "../../components/PartnersCard.astro";
+import Mc from "../../images/companies logo/clients/McDonald's.png";
+import TeamMember from "../../components/TeamMember.astro";
+import Typewriter from "../../components/Typewriter.astro";
+---
+
+<Layout title="About Us" lang="en">
+  <Typewriter />
+  <section class="bg-darkGray">
+    <div class="container section-container text-white">
+      <div class="py-10 text-left md:text-center">
+        <h4
+          class="text-primaryOrange text-2xl md:text-4xl font-light tracking-xl">
+          About us
+        </h4>
+        <h1 class="text-4xl md:text-5xl md:leading-relaxed">
+          Connecting Merchants and Logistics Providers <span
+            class="typewrite text-primaryOrange"
+            data-period="2000"
+            data-type='[ "Seamlessly.", "smoothly.", "efficiently.", "like never before!" ]'>
+          </span>
+          <span class="border-r-2 animate-ping"></span>
+        </h1>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="container section-container">
+      <div
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
+        <h4 class="text-3xl lg:w-1/2">
+          About <span class="text-primaryOrange font-medium">Leajlak</span>
+        </h4>
+        <p class="lg:w-2/3">
+          Leajlak is an innovative tech company focused on revolutionizing the
+          logistics and order management landscape. By offering a comprehensive,
+          customizable solution, Leajlak connects merchants with third-party
+          logistics companies, enabling a seamless and efficient delivery
+          ecosystem.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container section-container lg:h-96">
+      <div
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
+        <h4 class="text-3xl lg:w-1/2">Our Mission</h4>
+        <div class="lg:w-2/3 space-y-2">
+          <p>Enhance the operational efficiency of businesses.</p>
+
+          <p>
+            Provide seamless connectivity between merchants and logistics
+            providers
+          </p>
+
+          <p>
+            Improve customer satisfaction through precise and reliable delivery
+            services.
+          </p>
+
+          <p>
+            Foster collaboration within the logistics industry to create a
+            robust and efficient delivery network.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="container section-container lg:h-96">
+      <div
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
+        <h4 class="text-3xl lg:w-1/2">Our Vision</h4>
+        <p class="lg:w-2/3">
+          Leajlak's innovative Order Management System lies in its ability to
+          revolutionize the delivery ecosystem by seamlessly connecting
+          merchants and third-party logistics companies. By offering a
+          comprehensive solution to bridge the gap between these stakeholders,
+          Leajlak empowers businesses to achieve efficient, on-demand express
+          delivery services, ultimately enhancing operational efficiency,
+          collaboration, and customer satisfaction.​
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="bg-[url('../images/bg/team.png')] bg-no-repeat bg-cover bg-fixed h-full lg:h-[600px]">
+    <div class="container section-container flex items-center">
+      <div
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row text-white">
+        <h4 class="text-3xl lg:w-1/2">Our Core Values</h4>
+        <div class="lg:w-2/3 space-y-5">
+          <p class="text-white">
+            <span class="text-lg font-semibold">Innovation:</span> We are dedicated
+            to continuous innovation, constantly seeking new ways to improve our
+            platform and services.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">Integrity:</span> We operate with
+            integrity, ensuring transparency and honesty in all our interactions.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">Customer-Centric:</span> Our customers
+            are at the heart of everything we do. We strive to exceed their expectations
+            and deliver outstanding value.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">Collaboration:</span> We believe
+            in the power of collaboration, working closely with our clients and partners
+            to achieve common goals.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">Excellence:</span> We are committed
+            to excellence, maintaining the highest standards in our products and
+            services.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section>
+    <div class="container pt-24 space-y-20 flex flex-col w-full mx-auto">
+      <div
+        class="flex flex-col items-start gap-y-2 text-left md:text-center md:items-center">
+        <h2>Meet Our Team</h2>
+        <p class="md:w-[50%]">
+          Our team is composed of passionate and talented individuals who are
+          dedicated to making a difference in the delivery management industry.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-5 w-full">
+        <TeamMember
+          img_src={team_member}
+          full_name="full name"
+          position="CEO"
+        />
+        <TeamMember
+          img_src={team_member}
+          full_name="full name"
+          position="CEO"
+        />
+        <TeamMember
+          img_src={team_member}
+          full_name="full name"
+          position="CEO"
+        />
+        <TeamMember
+          img_src={team_member}
+          full_name="full name"
+          position="CEO"
+        />
+      </div>
+    </div>
+  </section> -->
+  <section class="bg-white">
+    <div class="container section-container space-y-10">
+      <h2 class="text-center">Trusted by Leading Businesses</h2>
+      <div
+        class="flex flex-row flex-wrap items-center justify-center gap-5 pb-10">
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+      </div>
+      <div
+        class="bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24">
+        <h4
+          class="text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
+          We are always on the lookout for talented individuals to join our
+          growing team.
+        </h4>
+        <a
+          href="#"
+          class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white bg-primaryOrange rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
+          Join now
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

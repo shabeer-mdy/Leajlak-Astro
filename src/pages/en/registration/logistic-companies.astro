@@ -1,0 +1,227 @@
+---
+import Button from "../../../components/Button.astro";
+import CheckBox from "../../../components/CheckBox.astro";
+import InputComp from "../../../components/InputComp.astro";
+import WavesShape from "../../../components/WavesShape.astro";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="Registartion | Logistic-Companies" lang="en">
+  <section
+    class="relative bg-[url('../images/bg/3PL.png')] bg-no-repeat bg-cover bg-fixed">
+    <h1 class="text-4xl md:text-5xl text-white text-center py-52">
+      Optimize Your Deliveries Today!
+    </h1>
+    <WavesShape />
+  </section>
+  <section class="">
+    <div class="container section-container flex items-center justify-center">
+      <form
+        id="formStepper"
+        class="w-[500px] bg-lightGray rounded-t-lg overflow-hidden shadow-xl">
+        <!-- Progress -->
+        <div
+          class="flex items-center justify-evenly bg-white gap-x-5 sm:gap-x-10 py-4">
+          <!-- contact info -->
+          <div class="stepper active relative flex flex-col items-center">
+            <div
+              class="size-10 sm:size-12 rounded-full border border-black/10 bg-white flex items-center justify-center">
+              <svg
+                class="icon size-5 sm:size-7"
+                viewBox="0 0 27 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M25.9589 27.6953L25.9645 27.7061L25.9704 27.7167C25.9822 27.7383 25.9926 27.7672 25.9974 27.8019C26.0021 27.8366 26.0004 27.872 25.993 27.9047C25.9857 27.9368 25.9739 27.9616 25.9625 27.9787C25.9585 27.9727 25.9543 27.9655 25.9502 27.957L25.9446 27.9455L25.9388 27.9342C23.3468 22.9309 18.7106 19.8621 13.5 19.8621C8.28945 19.8621 3.65319 22.9309 1.06125 27.9342L1.05539 27.9455L1.04983 27.957C1.04569 27.9655 1.04147 27.9727 1.03746 27.9787C1.02604 27.9616 1.0143 27.9368 1.00702 27.9047C0.999599 27.872 0.997927 27.8366 1.00265 27.8019C1.00737 27.7672 1.01777 27.7383 1.02963 27.7167L1.03551 27.706L1.04114 27.6951C2.91268 24.0798 5.77282 21.5306 9.06631 20.3299L10.9242 19.6526L9.27749 18.5577C7.71153 17.5165 6.475 15.9156 5.779 13.9843C5.08285 12.0526 4.97275 9.91374 5.46834 7.90175C5.96387 5.89 7.03239 4.13514 8.48884 2.89548C9.94308 1.6577 11.704 1 13.5 1C15.296 1 17.0569 1.6577 18.5112 2.89548C19.9676 4.13514 21.0361 5.89 21.5317 7.90175C22.0273 9.91374 21.9172 12.0526 21.221 13.9843C20.525 15.9156 19.2885 17.5165 17.7225 18.5577L16.0766 19.6521L17.9334 20.3298C21.2272 21.532 24.0874 24.0814 25.9589 27.6953ZM5.23778 10.433L5.23778 10.434C5.24006 12.816 6.08726 15.1189 7.62208 16.8332C9.16012 18.5511 11.2707 19.5418 13.4988 19.5445H13.5C15.1604 19.5445 16.7727 18.9939 18.1328 17.9789C19.4912 16.9651 20.5346 15.5363 21.147 13.8849C21.7593 12.2337 21.9183 10.4221 21.6072 8.67521C21.2961 6.92827 20.5261 5.31019 19.3802 4.03029C18.2333 2.74927 16.7581 1.86207 15.1337 1.50117C13.5079 1.13996 11.8241 1.3267 10.301 2.03139C8.77983 2.73515 7.4978 3.91822 6.60352 5.41313C5.70964 6.90736 5.23778 8.654 5.23778 10.433Z"
+                  stroke-width="2"></path>
+              </svg>
+              <svg
+                class="tick size-5 sm:size-7 hidden"
+                viewBox="0 0 34 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+            <hr
+              class="absolute hidden sm:block -right-20 top-6 border-black/20 border-2 w-full"
+            />
+            <p class="text-sm sm:text-base text-center">Contact Info</p>
+          </div>
+          <!-- general info -->
+          <div class="stepper relative flex flex-col items-center">
+            <div
+              class="size-10 sm:size-12 rounded-full border border-black/10 bg-white flex items-center justify-center">
+              <svg
+                class="icon size-5 sm:size-7"
+                viewBox="0 0 92 131"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.66667 111.625H4.66667V114.625C4.66667 117.531 5.74573 120.354 7.72235 122.465C9.70523 124.583 12.4384 125.812 15.3333 125.812H88.1667C88.3217 125.812 88.5136 125.876 88.6874 126.062C88.8675 126.254 89 126.555 89 126.906C89 127.258 88.8675 127.558 88.6874 127.75C88.5136 127.936 88.3217 128 88.1667 128H15.3333C12.1283 128 9.01132 126.642 6.68086 124.153C4.34414 121.658 3 118.234 3 114.625V16.375C3 12.7664 4.34415 9.34211 6.68086 6.84665C9.01132 4.35787 12.1283 3 15.3333 3H76.6667C79.8717 3 82.9887 4.35787 85.3191 6.84665C87.6559 9.34211 89 12.7664 89 16.375V106.438C89 107.875 88.4636 109.216 87.5647 110.176C86.672 111.13 85.505 111.625 84.3333 111.625H7.66667ZM84.3333 109.438H87.3333V106.438V61.4062V16.375C87.3333 13.4692 86.2543 10.6459 84.2776 8.53504C82.2948 6.41746 79.5616 5.1875 76.6667 5.1875H15.3333C12.4384 5.1875 9.70523 6.41746 7.72235 8.53504C5.74573 10.6459 4.66667 13.4692 4.66667 16.375V106.438V109.438H7.66667H84.3333ZM47.876 28.4116C48.4155 28.9877 48.75 29.8089 48.75 30.7031C48.75 31.5974 48.4155 32.4185 47.876 32.9947C47.3428 33.5641 46.6633 33.8438 46 33.8438C45.3367 33.8438 44.6572 33.5641 44.124 32.9947C43.5845 32.4185 43.25 31.5974 43.25 30.7031C43.25 29.8089 43.5845 28.9877 44.124 28.4116C44.6572 27.8421 45.3367 27.5625 46 27.5625C46.6633 27.5625 47.3428 27.8421 47.876 28.4116ZM46.8333 85.9688C46.8333 86.3201 46.7008 86.6207 46.5208 86.8129C46.347 86.9985 46.155 87.0625 46 87.0625C45.845 87.0625 45.653 86.9985 45.4792 86.8129C45.2992 86.6207 45.1667 86.3201 45.1667 85.9688V53.2188C45.1667 52.8674 45.2992 52.5668 45.4792 52.3746C45.653 52.189 45.845 52.125 46 52.125C46.155 52.125 46.347 52.189 46.5208 52.3746C46.7008 52.5668 46.8333 52.8674 46.8333 53.2188V85.9688Z"
+                  stroke-width="8"></path>
+              </svg>
+
+              <svg
+                class="tick size-5 sm:size-7 hidden"
+                viewBox="0 0 34 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+            <p class="text-sm sm:text-base text-center">general Info</p>
+            <hr
+              class="absolute hidden sm:block -right-20 top-6 border-black/20 border-2 w-full"
+            />
+          </div>
+          <!-- branch info -->
+          <div class="stepper relative flex flex-col items-center">
+            <div
+              class="size-10 sm:size-12 rounded-full border border-black/10 bg-white flex items-center justify-center">
+              <svg
+                class="icon size-5 sm:size-7"
+                viewBox="0 0 167 165"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M29.6364 81.0235V74.5235H23.1364H16.0637L83.0449 6.75567L83.0469 6.75357C83.1702 6.62872 83.2774 6.5662 83.348 6.5358C83.4172 6.50602 83.4663 6.5 83.5 6.5C83.5337 6.5 83.5828 6.50602 83.652 6.5358C83.7226 6.5662 83.8298 6.62872 83.9531 6.75357L83.9551 6.75567L150.936 74.5235H143.864H137.364V81.0235V156.602C137.364 157.317 137.102 157.88 136.819 158.196C136.684 158.346 136.564 158.421 136.484 158.458C136.407 158.493 136.353 158.5 136.318 158.5H30.6818C30.6466 158.5 30.5928 158.493 30.5155 158.458C30.4364 158.421 30.3159 158.346 30.1813 158.196C29.8977 157.88 29.6364 157.317 29.6364 156.602V81.0235ZM31.7273 148.205V154.705H38.2273H128.773H135.273V148.205V65.5466V62.8763L133.395 60.9772L88.1228 15.1764L83.5 10.4997L78.8772 15.1764L33.6045 60.9772L31.7273 62.8763V65.5466V148.205ZM61.2906 110.081L65.0749 107.65L64.1336 103.252C63.3672 99.6712 63.3672 95.9328 64.1336 92.3519L65.0749 87.9537L61.2906 85.5227L58.7984 83.9217L60.3291 80.9711L61.8056 81.9212L66.3327 84.8345L70.0382 80.9292C72.34 78.5032 75.066 76.7698 77.969 75.8038L82.4168 74.3238V69.6363V66.5294H84.5077V69.6363V74.3244L88.9562 75.8041C91.8917 76.7805 94.603 78.5299 96.893 80.9362L100.599 84.8301L105.119 81.9212L106.597 80.9702L108.127 83.9183L105.63 85.5255L101.85 87.9574L102.791 92.3519C103.557 95.9328 103.557 99.6712 102.791 103.252L101.85 107.65L105.634 110.081L108.125 111.682L106.594 114.631L105.115 113.68L100.592 110.774L96.889 114.672C94.5868 117.095 91.8611 118.827 88.9586 119.791L84.5077 121.269V125.959V129.075H82.4168V125.951V121.261L77.966 119.782C75.0635 118.818 72.3378 117.087 70.0355 114.664L66.3329 110.766L61.8099 113.672L60.3288 114.623L58.8007 111.681L61.2906 110.081ZM83.1982 116.885C85.6962 116.986 88.1707 116.524 90.4646 115.548C92.7558 114.573 94.7968 113.115 96.4863 111.302C98.1744 109.49 99.4825 107.357 100.365 105.047C101.246 102.737 101.694 100.275 101.694 97.802C101.694 95.3288 101.246 92.8666 100.365 90.5569C99.4825 88.2468 98.1744 86.1136 96.4863 84.3023C94.7969 82.4894 92.7558 81.0314 90.4646 80.0561C88.1707 79.0796 85.6962 78.6177 83.1982 78.7193C78.361 78.916 73.944 81.1907 70.8147 84.8031C67.7029 88.3951 66.0573 93.0625 66.0573 97.802C66.0573 102.542 67.7029 107.209 70.8147 110.801C73.944 114.413 78.361 116.688 83.1982 116.885Z"
+                  stroke-width="13"></path>
+              </svg>
+
+              <svg
+                class="tick size-5 sm:size-7 hidden"
+                viewBox="0 0 34 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+            <p class="text-sm sm:text-base text-center">resources info</p>
+          </div>
+        </div>
+        <!-- form -->
+        <div class="px-5 sm:px-20 py-10">
+          <!-- Contact info -->
+          <div class="form-elements active space-y-6">
+            <InputComp
+              type="text"
+              id="contactName"
+              bg="bg-lightGray"
+              lable_text="Point Of Contact Name"
+              data_needed={true}
+            />
+            <InputComp
+              type="email"
+              id="contactEmail"
+              bg="bg-lightGray"
+              lable_text="Contact Email"
+              data_needed={true}
+            />
+            <InputComp
+              type="number"
+              id="contactNumber"
+              bg="bg-lightGray"
+              lable_text="Contact Number"
+              data_needed={true}
+            />
+            <div class="flex justify-end">
+              <button
+                type="button"
+                id="next"
+                class="bg-primaryOrange px-5 py-3 text-white rounded-md hover:bg-primaryOrange/80 hover:shadow-md duration-300"
+                >Next</button
+              >
+            </div>
+            <p class="mt-10 text-sm font-thin">
+              please note that: (<span class="text-red-700">*</span>) fields are
+              mandatory, <br /> regular fields are optional.
+            </p>
+          </div>
+          <!-- general info -->
+          <div class="form-elements space-y-6">
+            <InputComp
+              type="text"
+              id="companyName"
+              bg="bg-lightGray"
+              lable_text="Company Name"
+              data_needed={true}
+            />
+            <InputComp
+              type="number"
+              id="crNumber"
+              bg="bg-lightGray"
+              lable_text="Cr Number"
+              data_needed={true}
+            />
+            <InputComp
+              type="text"
+              id="company_website"
+              bg="bg-lightGray"
+              lable_text="company website"
+            />
+
+            <InputComp
+              type="text"
+              id="location_link"
+              bg="bg-lightGray"
+              lable_text="Head office location (link)"
+            />
+            <div class="flex justify-between">
+              <button
+                type="button"
+                id="return"
+                class="bg-gray-500 px-5 py-3 text-white rounded-md hover:bg-gray-500/80 hover:shadow-md duration-300">
+                Return
+              </button>
+              <button
+                type="button"
+                id="next"
+                class="bg-primaryOrange px-5 py-3 text-white rounded-md hover:bg-primaryOrange/80 hover:shadow-md duration-300"
+                >Next</button
+              >
+            </div>
+          </div>
+          <!-- branch info -->
+          <div class="form-elements space-y-6">
+            <InputComp
+              type="number"
+              id="captain_numbers"
+              bg="bg-lightGray"
+              lable_text="Number of captains"
+              data_needed={true}
+            />
+            <InputComp
+              type="number"
+              id="Coverage_area"
+              bg="bg-lightGray"
+              lable_text="Coverage area"
+              data_needed={true}
+            />
+            <div class="flex justify-between">
+              <button
+                type="button"
+                id="return"
+                class="bg-gray-500 px-5 py-3 text-white rounded-md hover:bg-gray-500/80 hover:shadow-md duration-300">
+                Return
+              </button>
+              <button
+                type="submit"
+                id="submit"
+                class="bg-primaryOrange px-5 py-3 text-white rounded-md hover:bg-primaryOrange/80 hover:shadow-md duration-300"
+                >Submit</button
+              >
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="../../../Script/registration-lc.js"></script>
+</Layout>

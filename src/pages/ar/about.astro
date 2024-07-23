@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import team_member from "../../images/profile-pic/team-member.png";
+import { Image } from "astro:assets";
+import PartnersCard from "../../components/PartnersCard.astro";
+import Mc from "../../images/companies logo/clients/McDonald's.png";
+import TeamMember from "../../components/TeamMember.astro";
+import Typewriter from "../../components/Typewriter.astro";
+---
+
+<Layout title="معلومات عنا" lang="ar">
+  <Typewriter />
+  <section class="bg-darkGray">
+    <div
+      class="container section-container text-white flex items-center justify-center h-[500px]">
+      <div class="text-right md:text-center">
+        <h4 class="text-primaryOrange text-2xl md:text-4xl font-light">عنا</h4>
+        <h1 class="text-4xl md:text-5xl md:leading-relaxed">
+          ربط التجار ومقدمي الخدمات اللوجستية <span
+            class="typewrite text-primaryOrange"
+            data-period="2000"
+            data-type='[ "بشكل سلس.", "بنعومة.", "بكفاءة.", "كما لم يحدث من قبل!" ]'>
+          </span>
+          <span class="border-r-2 animate-ping"></span>
+        </h1>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="container section-container">
+      <div
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
+        <h4 class="text-3xl lg:w-1/2">
+          عن <span class="text-primaryOrange font-medium">لاجلك</span>
+        </h4>
+        <p class="lg:w-2/3">
+          لاجلك هي شركة تكنولوجيا مبتكرة تركز على ثورة في مجال اللوجستيات وإدارة
+          الطلبات. من خلال تقديم حل شامل وقابل للتخصيص، تقوم لاجلك بربط التجار
+          بشركات اللوجستيات الخارجية، مما يمكّن من نظام تسليم سلس وفعال.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container section-container lg:h-96">
+      <div
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
+        <h4 class="text-3xl lg:w-1/2">مهمتنا</h4>
+        <div class="lg:w-2/3 space-y-2">
+          <p>تعزيز كفاءة العمليات التجارية.</p>
+
+          <p>توفير اتصال سلس بين التجار ومقدمي الخدمات اللوجستية.</p>
+
+          <p>تحسين رضا العملاء من خلال خدمات تسليم دقيقة وموثوقة.</p>
+
+          <p>
+            تعزيز التعاون داخل صناعة اللوجستيات لإنشاء شبكة تسليم قوية وفعالة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="container section-container lg:h-96">
+      <div
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
+        <h4 class="text-3xl lg:w-1/2">رؤيتنا</h4>
+        <p class="lg:w-2/3">
+          يكمن ابتكار نظام إدارة الطلبات من لاجلك في قدرته على ثورة نظام التسليم
+          من خلال ربط التجار وشركات اللوجستيات الخارجية بسلاسة. من خلال تقديم حل
+          شامل لربط هذه الأطراف المعنية، تمكّن لاجلك الشركات من تحقيق خدمات
+          تسليم سريعة حسب الطلب، مما يعزز في النهاية كفاءة العمليات والتعاون
+          ورضا العملاء.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="bg-[url('../images/bg/team.png')] bg-no-repeat bg-cover bg-fixed h-full lg:h-[600px]">
+    <div class="container section-container grid items-center">
+      <div
+        class="flex flex-col justify-between space-y-5 lg:space-y-0 lg:flex-row text-white">
+        <h4 class="text-3xl lg:w-1/2">قيمنا الأساسية</h4>
+        <div class="lg:w-2/3 space-y-5">
+          <p class="text-white">
+            <span class="text-lg font-semibold">الابتكار:</span> نحن ملتزمون بالابتكار
+            المستمر، ونسعى دائمًا لإيجاد طرق جديدة لتحسين منصتنا وخدماتنا.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">النزاهة:</span> نعمل بنزاهة، ونضمن
+            الشفافية والصدق في جميع تعاملاتنا.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">التركيز على العملاء:</span> عملاؤنا
+            هم في قلب كل ما نقوم به. نسعى لتجاوز توقعاتهم وتقديم قيمة متميزة.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">التعاون:</span> نؤمن بقوة التعاون،
+            ونعمل بشكل وثيق مع عملائنا وشركائنا لتحقيق الأهداف المشتركة.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">التفوق:</span> نحن ملتزمون بالتفوق،
+            ونحافظ على أعلى المعايير في منتجاتنا وخدماتنا.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="container section-container space-y-10">
+      <h2 class="text-center">موثوق به من قبل الشركات الرائدة</h2>
+      <div
+        class="flex flex-row flex-wrap items-center justify-center gap-5 pb-10">
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+        <PartnersCard img_src={Mc} alt="mc" />
+      </div>
+      <div
+        class="bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24">
+        <h4
+          class="text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
+          نحن دائمًا في بحث عن أفراد موهوبين للانضمام إلى فريقنا المتنامي.
+        </h4>
+        <a
+          href="/Ar/registration/employees"
+          class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white bg-primaryOrange rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
+          انضم الآن
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

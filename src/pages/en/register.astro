@@ -1,0 +1,60 @@
+---
+import Button from "../../components/Button.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Register" lang="en">
+  <section class="bg-darkGray">
+    <div class="container section-container">
+      <div class="py-10">
+        <h2 class="text-center text-white lg:text-5xl">Choose your category</h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container section-container">
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">Logistic Companies</h4>
+          <p>
+            Leajlak's Order Management System empowers logistics companies to
+            overcome operational hurdles, enhance efficiency, and deliver
+            exceptional service to their clients and customers.
+          </p>
+          <Button link="registration/logistic-companies" text="Join now" />
+        </div>
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">Merchants</h4>
+          <p>
+            join our platform today and unlock seamless delivery management,
+            increased efficiency, and unparalleled customer satisfaction become
+            a part of the future of logistics.
+          </p>
+          <Button link="registration/merchants" text="Join now" />
+        </div>
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">Drivers</h4>
+          <p>
+            Are you looking to earn extra income with a flexible schedule? Join
+            us at Leajlak as a rider and be part of a dynamic team dedicated to
+            providing efficient delivery services.
+          </p>
+          <Button link="registration/drivers" text="Join now" />
+        </div>
+        <div
+          class="flex flex-col items-start justify-center gap-5 border border-black/20 py-6 px-6 rounded-lg hover:shadow-xl hover:border-transparent duration-300">
+          <h4 class="text-3xl">Employees</h4>
+          <p>
+            Become a part of our innovative team and help revolutionize the
+            delivery management industry your next great career move starts
+            here!
+          </p>
+          <Button link="registration/employees" text="Join now" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
