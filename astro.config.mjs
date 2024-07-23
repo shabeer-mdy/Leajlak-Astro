@@ -12,6 +12,4 @@ export default defineConfig({
     },
   },
   trailingSlash: "never",
-  site: "https://leajlak/en",
-  publicDir: "./en",
 });
