@@ -10,7 +10,7 @@ export default {
         customYellow: "rgba(247, 182, 20, 1)",
       },
       backgroundImage: {
-        bg_hero: "url('./public/pastry.gif')",
+        bg_hero: "url('/pastry.gif')",
       },
       fontSize: {
         sm: "14px",
