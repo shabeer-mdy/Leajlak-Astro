@@ -8,7 +8,6 @@ export default defineConfig({
     locales: ["en", "ar"],
     routing: {
       prefixDefaultLocale: true,
-      redirectToDefaultLocale: false,
     },
   },
   trailingSlash: "never",
