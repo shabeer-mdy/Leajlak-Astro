@@ -1,5 +1,7 @@
 ---
-const { quote, name, position, img_src, img_alt, active } = Astro.props;
+const { quote, name, position, img_alt, active } = Astro.props;
+import { Image } from "astro:assets";
+import profile_pic from "../images/profile-pic/profile_pic.png";
 ---
 
 <div class=`carousel-item ${active}`>
@@ -18,7 +20,7 @@ const { quote, name, position, img_src, img_alt, active } = Astro.props;
   </blockquote>
   <figure>
     <figcaption class="flex items-center justify-center mt-6 gap-x-3">
-      <img class="w-8 h-8 rounded-full" src={img_src} alt={img_alt} />
+      <Image class="w-8 h-8 rounded-full" src={profile_pic} alt={img_alt} />
       <div class="flex items-center">
         <cite class="pe-3 font-medium">{name}</cite>
         <span>|</span>
