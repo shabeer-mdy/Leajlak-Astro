@@ -151,9 +151,10 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("en")}`}
                         class="hover:text-primaryOrange inline-flex items-center"
                         role="menuitem">
-                        <img
-                          src="/src/images/flag/2027810-middle.png"
-                          class="h-5 w-5 rounded-full me-2"
+                        <Image
+                          loading="eager"
+                          src={arabic}
+                          class="h-5 w-5 lg:h-6 lg:w-6 rounded-full m-2"
                           alt=""
                         />
                         Arabic
@@ -172,9 +173,10 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-primaryOrange inline-flex items-center"
                         role="menuitem">
-                        <img
-                          src="/src/images/flag/united-states.png"
-                          class="h-5 w-5 rounded-full me-2"
+                        <Image
+                          loading="eager"
+                          src={english}
+                          class="h-5 w-5 lg:h-6 lg:w-6 rounded-full m-2"
                           alt=""
                         />
                         English

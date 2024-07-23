@@ -26,6 +26,11 @@ import fleet from "../../images/bg/fleet.png";
 import Mcdonald from "../../images/companies logo/clients/McDonald's.png";
 import Restaurant from "../../images/bg/restaurent.png";
 import app from "../../images/Group 14.png";
+import order_status from "../../images/icons/benefits/integration/order status.png";
+import LiveLocation from "../../images/icons/benefits/integration/live location.png";
+import Payment_methods from "../../images/icons/benefits/integration/payment method.png";
+import chat from "../../images/icons/benefits/integration/chat.png";
+import Payment from "../../images/icons/benefits/integration/order-return.png";
 ---
 
 <Layout title="Home" lang="en">
@@ -1358,12 +1363,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-20">
         <div
           class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-300">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/order status.png"
-            alt="order-status-updates"
-            loading="eager"
-          />
+          <Image src={order_status} alt="order_status" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">Order status</h4>
             <p class="text-left lg:text-justify">
@@ -1376,12 +1376,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
         </div>
         <div
           class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/live location.png"
-            alt="live-location"
-            loading="eager"
-          />
+          <Image src={LiveLocation} alt="orders" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">Drivers live location</h4>
             <p class="text-left lg:text-justify">
@@ -1401,12 +1396,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
               justify-center
               hover:text-primaryOrange
               duration-200">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/payment method.png"
-            alt="Payment-methods"
-            loading="eager"
-          />
+          <Image src={Payment_methods} alt="Payment-methods" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">Payment methods</h4>
             <p class="text-left lg:text-justify">
@@ -1425,12 +1415,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
                   justify-center
                   hover:text-primaryOrange
                   duration-200">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/chat.png"
-            alt="customer-chat"
-            loading="eager"
-          />
+          <Image class="w-16" src={chat} alt="customer-chat" loading="eager" />
           <div>
             <h4 class="text-xl font-medium">Customer chat</h4>
             <p class="text-left lg:text-justify">
@@ -1449,9 +1434,9 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
                       justify-center
                       hover:text-primaryOrange
                       duration-200">
-          <img
+          <Image
             class="w-16"
-            src="/src/images/icons/benefits/integration/order-return.png"
+            src={Payment}
             alt="Payment-methods"
             loading="eager"
           />
@@ -1490,7 +1475,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
     </div>
   </section>
   <section
-    class="bg-[url('../src/images/bg/digital-bg1.png')] bg-no-repeat bg-cover bg-fixed">
+    class="bg-[url('../images/bg/digital-bg1.png')] bg-no-repeat bg-cover bg-fixed">
     <div
       class="section-container flex flex-col justify-center items-center text-center">
       <h2>Hear from Our Happy Clients</h2>

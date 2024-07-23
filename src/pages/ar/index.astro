@@ -26,12 +26,16 @@ import fleet from "../../images/bg/fleet.png";
 import Mcdonald from "../../images/companies logo/clients/McDonald's.png";
 import Restaurant from "../../images/bg/restaurent.png";
 import app from "../../images/Group 14.png";
+import order_status from "../../images/icons/benefits/integration/order status.png";
+import LiveLocation from "../../images/icons/benefits/integration/live location.png";
+import Payment_methods from "../../images/icons/benefits/integration/payment method.png";
+import chat from "../../images/icons/benefits/integration/chat.png";
+import Payment from "../../images/icons/benefits/integration/order-return.png";
 ---
 
 <Layout title="الصفحة الرئيسية" lang="ar">
   <Carousel />
-  <section
-    class="bg-[url('../src/images/pastry.gif')] bg-no-repeat bg-cover bg-fixed h-screen">
+  <section class="bg-bg_hero bg-no-repeat bg-cover bg-fixed h-screen">
     <div
       class="w-full h-full absolute inset-0 bg-gradient-to-t md:bg-gradient-to-br bg-black/60">
     </div>
@@ -1354,81 +1358,61 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-20">
         <div
           class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-300">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/order status.png"
-            alt="order-status-updates"
-            loading="eager"
-          />
+          <Image src={order_status} alt="order_status" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">حالة الطلب</h4>
             <p class="text-left lg:text-justify">
-              توفر تحديثات حالة الطلب المستندة إلى API فوائد من حيث الرؤية في
-              الوقت الفعلي، وتحسين تجربة العملاء، وتبسيط العمليات، والتواصل
-              الاستباقي، وتقديرات التسليم الدقيقة، وحل المشكلات بكفاءة.
+              توفر تحديثات حالة الطلب المستندة إلى API فوائد الرؤية في الوقت
+              الفعلي، وتحسين تجربة العملاء، وتبسيط العمليات، والاتصال الاستباقي،
+              وتقديرات دقيقة للتسليم، وحل المشكلات بكفاءة.
             </p>
           </div>
         </div>
         <div
           class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/live location.png"
-            alt="live-location"
-            loading="eager"
-          />
+          <Image src={LiveLocation} alt="orders" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">الموقع المباشر للسائقين</h4>
             <p class="text-left lg:text-justify">
-              يوفر مزايا كبيرة من حيث تحسين تجربة العملاء، وتحسين عمليات
-              التسليم، وتعزيز الكفاءة، وضمان الإدارة الفعالة ومراقبة عمليات
+              يقدم مزايا كبيرة من حيث تحسين تجربة العملاء، وتحسين عمليات
+              التسليم، وتعزيز الكفاءة، وضمان إدارة ومراقبة فعالة لعمليات
               التسليم.
             </p>
           </div>
         </div>
         <div
           class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200">
-          <img
+          <Image src={Payment_methods} alt="Payment-methods" class="w-16" />
+          <div>
+            <h4 class="text-xl font-medium">طرق الدفع</h4>
+            <p class="text-left lg:text-justify">
+              بمعرفة طريقة دفع الطلبات، يتم تبسيط عملية التسليم للسائقين. الدفع
+              المسبق، الدفع عند الاستلام. الدفع بواسطة البطاقة عند التسليم (آلة
+              السحب).
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200">
+          <Image class="w-16" src={chat} alt="customer-chat" loading="eager" />
+          <div>
+            <h4 class="text-xl font-medium">دردشة العملاء</h4>
+            <p class="text-left lg:text-justify">
+              يتيح هذا API الاتصال بين العملاء وممثلي التسليم، مما يوفر قناة
+              مريحة لمعالجة الأسئلة والمخاوف وتقديم المعلومات حول الخدمات.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200">
+          <Image
             class="w-16"
-            src="/src/images/icons/benefits/integration/payment method.png"
+            src={Payment}
             alt="Payment-methods"
             loading="eager"
           />
           <div>
-            <h4 class="text-xl font-medium">طرق الدفع</h4>
-            <p class="text-left lg:text-justify">
-              من خلال معرفة طريقة الدفع للأوامر، يتم تبسيط عملية التسليم للركاب.
-              الدفع المسبق، الدفع نقداً عند التسليم، الدفع ببطاقة عند التسليم
-              (آلة تمرير البطاقة).
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/chat.png"
-            alt="customer-chat"
-            loading="eager"
-          />
-          <div>
-            <h4 class="text-xl font-medium">دردشة العملاء</h4>
-            <p class="text-left lg:text-justify">
-              يتيح هذا الـAPI التواصل بين العملاء وممثلي التسليم، مما يوفر قناة
-              مريحة لمعالجة الأسئلة والاهتمامات وتقديم المعلومات حول الخدمات.
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200">
-          <img
-            class="w-16"
-            src="/src/images/icons/benefits/integration/order-return.png"
-            alt="order-return"
-            loading="eager"
-          />
-          <div>
-            <h4 class="text-xl font-medium">إدارة إرجاع الطلب</h4>
+            <h4 class="text-xl font-medium">إدارة إرجاع الطلبات</h4>
             <p class="text-left lg:text-justify">
               يمكن أن تقلل عملية الإرجاع الفعالة من خطر الاحتيال، وتقليل عدد
               المرتجعات، وتحسين دقة المخزون.
