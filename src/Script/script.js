@@ -22,18 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
       logoDefault.style.display = "block";
       logoScrolled.style.display = "none";
     }
-    /*  const route = window.location.pathname.replace(/\$/, "");
-    if (
-      route === "/registration/logistic-companies" ||
-      route === "/registration/merchants"
-    ) {
-      header.classList.add("scrolled");
-      logoDefault.style.display = "none";
-      logoScrolled.style.display = "block";
-    } */
   }
   function setActiveItem() {
-    const currentRoute = window.location.pathname.replace(/\$/, "");
+    const currentRoute = window.location.pathname.replace(/\/$/, "");
+    /* console.log(currentRoute); */
     navItems.forEach((item) => {
       const itemRoute = item.getAttribute("data-route");
       if (currentRoute === itemRoute) {
