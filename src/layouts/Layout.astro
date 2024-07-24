@@ -15,19 +15,10 @@ const { lang = "en" } = Astro.props;
 <!doctype html>
 <html lang={lang} class="scroll-smooth">
   <head>
-    <script>
-      export async function getStaticProps() {
-        return {
-          redirect: {
-            destination: "/en",
-            permanent: false,
-          },
-        };
-      }
-    </script>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
+
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link
       rel="stylesheet"

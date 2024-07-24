@@ -9,9 +9,6 @@ export default {
         darkGray: "rgba(38, 38, 38, 1)",
         customYellow: "rgba(247, 182, 20, 1)",
       },
-      backgroundImage: {
-        bg_hero: "url('/pastry.gif')",
-      },
       fontSize: {
         sm: "14px",
         base: "16px",
