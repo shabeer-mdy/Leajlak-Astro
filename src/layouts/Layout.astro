@@ -15,10 +15,6 @@ const { lang = "en" } = Astro.props;
 <!doctype html>
 <html lang={lang} class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <script>
       export async function getStaticProps() {
         return {
@@ -29,6 +25,10 @@ const { lang = "en" } = Astro.props;
         };
       }
     </script>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
