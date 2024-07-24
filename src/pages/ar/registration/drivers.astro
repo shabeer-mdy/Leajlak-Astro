@@ -1,7 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../../../layouts/Layout.astro";
-import app from "../../../images/Group 14.png";
+import one from "../../../images/icons/1.png";
+import two from "../../../images/icons/2.png";
+import three from "../../../images/icons/3.png";
+import four from "../../../images/icons/4.png";
+import google from "../../../images/icons/google play.png";
+import apple from "../../../images/icons/apple store.png";
 ---
 
 <Layout title="التسجيل | المناديب" lang="ar">
@@ -36,10 +41,10 @@ import app from "../../../images/Group 14.png";
             />
             <p>
               <span class="text-black font-medium">قم بتحميل</span> التطبيق من متجر
-              جوجل بلاي أو آب ستور
+              جوجل بلاي أو أبل ستور
             </p>
           </div>
-          <img src="/src/images/icons/1.png" alt="تحميل" />
+          <Image src={one} alt="تحميل" />
         </div>
         <div
           class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10">
@@ -50,7 +55,7 @@ import app from "../../../images/Group 14.png";
             />
             <p>قم بملء التفاصيل اللازمة وتقديم أي مستندات مطلوبة.</p>
           </div>
-          <img src="/src/images/icons/2.png" alt="تسجيل" />
+          <Image src={two} alt="ملء التفاصيل" />
         </div>
         <div
           class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10">
@@ -59,9 +64,9 @@ import app from "../../../images/Group 14.png";
             <hr
               class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
             />
-            <p>تعرف على عملياتنا وابدأ العمل في أسرع وقت ممكن.</p>
+            <p>تعرف على عملياتنا وابدأ بسرعة.</p>
           </div>
-          <img src="/src/images/icons/3.png" alt="تعلم" />
+          <Image src={three} alt="تعرف على العمليات" />
         </div>
         <div
           class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10">
@@ -70,26 +75,14 @@ import app from "../../../images/Group 14.png";
             <hr
               class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
             />
-            <p>ابدأ في قبول مهام التوصيل وابدأ في جني دخل إضافي.</p>
+            <p>ابدأ في قبول مهام التسليم وابدأ في كسب دخل إضافي.</p>
           </div>
-          <img src="/src/images/icons/4.png" alt="بدء العمل" />
+          <Image src={four} alt="ابدأ في قبول المهام" />
         </div>
       </div>
       <div class="flex items-center gap-3">
-        <a href="#"
-          ><img
-            src="/src/images/icons/google play.png"
-            alt="جوجل بلاي"
-            class="w-36 md:w-60"
-          /></a
-        >
-        <a href="#"
-          ><img
-            src="/src/images/icons/apple store.png"
-            alt="آب ستور"
-            class="w-36 md:w-60"
-          /></a
-        >
+        <a href="#"><Image src={google} alt="جوجل" class="w-36 md:w-60" /></a>
+        <a href="#"><Image src={apple} alt="أبل" class="w-36 md:w-60" /></a>
       </div>
     </div>
   </section>
