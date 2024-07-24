@@ -205,8 +205,16 @@ a:hover #arrow {
   @apply flex flex-row items-center;
 }
 
-li svg {
+.benfits-list-ar {
+  @apply flex flex-row items-center;
+}
+
+.benfits-list svg {
   @apply w-7 h-7 mr-4 fill-white lg:fill-black;
+}
+
+.benfits-list-ar svg {
+  @apply w-7 h-7 ml-4 fill-white lg:fill-black;
 }
 
 .carousel {

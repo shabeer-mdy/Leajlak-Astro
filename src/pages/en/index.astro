@@ -36,25 +36,32 @@ import truck from "../../images/icons/path-truck 1.png";
 
 <Layout title="Home" lang="en">
   <Carousel />
-  <section class="bg-bg_hero bg-no-repeat bg-cover bg-fixed h-screen">
+  <section class="relative min-h-screen">
+    <video
+      autoplay
+      muted
+      loop
+      class="absolute right-0 bottom-0 h-full w-full object-cover">
+      <source src="pastry.mp4" type="video/mp4" />
+    </video>
     <div
-      class="w-full h-full absolute inset-0 bg-gradient-to-t md:bg-gradient-to-br bg-black/60">
-    </div>
-    <div
-      class="container section-container flex flex-col justify-center text-center gap-3">
-      <div class="flex flex-col lg:items-center text-white">
-        <div class="mb-5">
-          <div class="text-3xl lg:text-5xl">Streamline Your Deliveries,</div>
-          <h1 class="text-primaryOrange text-5xl lg:text-7xl">
-            Elevate Your Business.
-          </h1>
-        </div>
-        <div class="leading-7 mb-5 text-sm lg:text-base lg:w-[80%]">
-          We are a leading technology partner dedicated to enhancing the last
-          mile delivery experience for companies focused on customer
-          satisfaction. Our mission is to ensure that every delivery reaches its
-          destination reliably, on-time, with precision, efficiency, and in the
-          most sustainable manner possible.
+      class="w-full h-full absolute inset-0 bg-gradient-to-t md:bg-gradient-to-br bg-black/80">
+      <div
+        class="container section-container flex flex-col justify-center text-center gap-5">
+        <div class="flex flex-col lg:items-center text-white">
+          <div class="space-y-1 mb-5">
+            <div class="text-3xl lg:text-5xl">Streamline Your Deliveries,</div>
+            <h1 class="text-primaryOrange text-5xl lg:text-7xl">
+              Elevate Your Business.
+            </h1>
+          </div>
+          <div class="leading-7 mb-5 text-sm lg:text-base lg:w-[80%]">
+            We are a leading technology partner dedicated to enhancing the last
+            mile delivery experience for companies focused on customer
+            satisfaction. Our mission is to ensure that every delivery reaches
+            its destination reliably, on-time, with precision, efficiency, and
+            in the most sustainable manner possible.
+          </div>
         </div>
       </div>
     </div>
@@ -153,7 +160,7 @@ import truck from "../../images/icons/path-truck 1.png";
             </p>
 
             <ul class="flex flex-col py-2 space-y-5">
-              <li class="benfits-list">
+              <li class="benfits-list mr-4">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"

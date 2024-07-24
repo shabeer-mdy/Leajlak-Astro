@@ -36,33 +36,42 @@ import truck from "../../images/icons/path-truck 1.png";
 
 <Layout title="الصفحة الرئيسية" lang="ar">
   <Carousel />
-  <section class="bg-bg_hero bg-no-repeat bg-cover bg-fixed h-screen">
+  <section class="relative h-screen">
+    <video
+      autoplay
+      muted
+      loop
+      class="absolute right-0 bottom-0 h-full w-full object-cover">
+      <source src="pastry.mp4" type="video/mp4" />
+    </video>
     <div
-      class="w-full h-full absolute inset-0 bg-gradient-to-t md:bg-gradient-to-br bg-black/60">
-    </div>
-    <div
-      class="container section-container flex flex-col justify-center text-center gap-3">
-      <div class="flex flex-col lg:items-center text-white">
-        <div class="mb-5">
-          <div class="text-3xl lg:text-5xl">
-            تبسيط عمليات التسليم الخاصة بك،
+      class="w-full h-full absolute inset-0 bg-gradient-to-t md:bg-gradient-to-br bg-black/80">
+      <div
+        class="container section-container flex flex-col justify-center text-center gap-3">
+        <div class="flex flex-col lg:items-center text-white">
+          <div class="mb-5">
+            <div class="text-3xl lg:text-5xl">
+              تبسيط عمليات التسليم الخاصة بك،
+            </div>
+            <h1 class="text-primaryOrange text-5xl lg:text-7xl">
+              رفع مستوى عملك.
+            </h1>
           </div>
-          <h1 class="text-primaryOrange text-5xl lg:text-7xl">
-            رفع مستوى عملك.
-          </h1>
-        </div>
-        <div class="leading-7 mb-5 text-sm lg:text-base lg:w-[80%]">
-          نحن شريك تقني رائد مكرس لتعزيز تجربة التسليم الأخيرة للشركات التي تركز
-          على رضا العملاء. مهمتنا هي ضمان وصول كل عملية تسليم إلى وجهتها بثقة
-          وفي الوقت المحدد وبدقة وكفاءة وبأكثر الطرق استدامة ممكنة.
+          <div class="leading-7 mb-5 text-sm lg:text-base lg:w-[80%]">
+            نحن شريك تقني رائد مكرس لتعزيز تجربة التسليم الأخيرة للشركات التي
+            تركز على رضا العملاء. مهمتنا هي ضمان وصول كل عملية تسليم إلى وجهتها
+            بثقة وفي الوقت المحدد وبدقة وكفاءة وبأكثر الطرق استدامة ممكنة.
+          </div>
         </div>
       </div>
     </div>
   </section>
   <div class="space-y-16 w-full overflow-x-hidden py-10 bg-white">
-    <h4 class="text-3xl font-medium text-center">
-      <span class="text-primaryOrange font-semibold">لاجلك </span> العلامات التجارية
-      المدعومة من
+    <h4 class="text-3xl font-medium text-center px-3">
+      العلامات التجارية المدعومة من <span
+        class="text-primaryOrange font-semibold text-4xl"
+        >لاجلك
+      </span>
     </h4>
     <div class="logo-track" dir="ltr">
       <LogoItems imgSrc={Mcdonald} alt="صورة" />
@@ -155,7 +164,7 @@ import truck from "../../images/icons/path-truck 1.png";
             </p>
 
             <ul class="flex flex-col py-2 space-y-5">
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +238,7 @@ import truck from "../../images/icons/path-truck 1.png";
                 </svg>
                 <span>تحسين إدارة التسليم</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -324,7 +333,7 @@ import truck from "../../images/icons/path-truck 1.png";
                 </svg>
                 <span>تتبع وتخصيص السائقين</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -513,7 +522,7 @@ import truck from "../../images/icons/path-truck 1.png";
                 </svg>
                 <span>تبسيط التسوية</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -627,7 +636,7 @@ import truck from "../../images/icons/path-truck 1.png";
                 </svg>
                 <span>تحسين إدارة الأسطول</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -716,7 +725,7 @@ import truck from "../../images/icons/path-truck 1.png";
                 </svg>
                 <span>تعيينات الطلبات التلقائية</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -866,7 +875,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
               التي يواجهها التجار وتفتح الإمكانيات لنظام تسليم سلس وفعال.
             </p>
             <ul class="flex flex-col py-2 space-y-5">
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -989,7 +998,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
                 </svg>
                 <span>نظام إدارة مخصص</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1059,7 +1068,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
                 </svg>
                 <span>تتبع في الوقت الفعلي</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1267,7 +1276,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
                 </svg>
                 <span>إدارة السائقين</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1305,7 +1314,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
                 </svg>
                 <span>شراكات لوجستية</span>
               </li>
-              <li class="benfits-list">
+              <li class="benfits-list-ar">
                 <svg viewBox="0 0 744 773" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M694.71 374.905L555.21 109.186C553.202 105.374 550.242 102.195 546.641 99.9845C543.04 97.7738 538.932 96.6132 534.75 96.6251H209.25C205.067 96.6132 200.959 97.7738 197.358 99.9845C193.757 102.195 190.797 105.374 188.79 109.186L49.2897 374.905C47.2491 378.577 46.1748 382.743 46.1748 386.983C46.1748 391.224 47.2491 395.389 49.2897 399.061L188.79 664.78C190.916 668.413 193.928 671.398 197.52 673.433C201.113 675.469 205.159 676.484 209.25 676.375H534.75C538.932 676.387 543.04 675.226 546.641 673.016C550.242 670.805 553.202 667.626 555.21 663.814L694.71 398.095C696.582 394.54 697.563 390.553 697.563 386.5C697.563 382.448 696.582 378.46 694.71 374.905ZM533.122 169.094L635.19 362.344H414.315L533.122 169.094ZM372 341.569L251.565 144.938H492.435L372 341.569ZM210.877 169.094L329.685 362.344H108.81L210.877 169.094ZM108.81 410.656H329.685L210.877 603.906L108.81 410.656ZM372 431.431L492.435 628.063H251.565L372 431.431ZM533.122 603.906L414.315 410.656H635.19L533.122 603.906Z"
@@ -1362,7 +1371,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
           <Image src={order_status} alt="order_status" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">حالة الطلب</h4>
-            <p class="text-left lg:text-justify">
+            <p class="teright lg:text-justify">
               توفر تحديثات حالة الطلب المستندة إلى API فوائد الرؤية في الوقت
               الفعلي، وتحسين تجربة العملاء، وتبسيط العمليات، والاتصال الاستباقي،
               وتقديرات دقيقة للتسليم، وحل المشكلات بكفاءة.
@@ -1374,7 +1383,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
           <Image src={LiveLocation} alt="orders" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">الموقع المباشر للسائقين</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               يقدم مزايا كبيرة من حيث تحسين تجربة العملاء، وتحسين عمليات
               التسليم، وتعزيز الكفاءة، وضمان إدارة ومراقبة فعالة لعمليات
               التسليم.
@@ -1386,7 +1395,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
           <Image src={Payment_methods} alt="Payment-methods" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">طرق الدفع</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               بمعرفة طريقة دفع الطلبات، يتم تبسيط عملية التسليم للسائقين. الدفع
               المسبق، الدفع عند الاستلام. الدفع بواسطة البطاقة عند التسليم (آلة
               السحب).
@@ -1398,7 +1407,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
           <Image class="w-16" src={chat} alt="customer-chat" loading="eager" />
           <div>
             <h4 class="text-xl font-medium">دردشة العملاء</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               يتيح هذا API الاتصال بين العملاء وممثلي التسليم، مما يوفر قناة
               مريحة لمعالجة الأسئلة والمخاوف وتقديم المعلومات حول الخدمات.
             </p>
@@ -1414,7 +1423,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
           />
           <div>
             <h4 class="text-xl font-medium">إدارة إرجاع الطلبات</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               يمكن أن تقلل عملية الإرجاع الفعالة من خطر الاحتيال، وتقليل عدد
               المرتجعات، وتحسين دقة المخزون.
             </p>
