@@ -19,6 +19,16 @@ const { lang = "en" } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <script>
+      export async function getStaticProps() {
+        return {
+          redirect: {
+            destination: "/en",
+            permanent: false,
+          },
+        };
+      }
+    </script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
