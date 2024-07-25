@@ -303,13 +303,6 @@ a:hover #arrow {
 }
 
 /* Solutions */
-
-#merchant-hero {
-  background-image: url("../images/bg/restaurant-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
 .card-solution {
   @apply flex flex-col items-center justify-center gap-y-5 text-center p-5 h-[400px] filter grayscale  bg-white rounded-md hover:shadow-Cxl hover:grayscale-0 duration-300 lg:flex-card_solution_md;
 }
@@ -331,13 +324,6 @@ a:hover #arrow {
 
 .benefits-card {
   @apply flex flex-col items-center justify-center relative lg:flex-row;
-}
-
-#logisitc-hero {
-  background-image: url("../images/bg/fleet-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 #contact-hero {

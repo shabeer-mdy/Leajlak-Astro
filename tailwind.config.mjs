@@ -3,6 +3,10 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      backgroundImage: {
+        logistic: "url('/src/images/bg/fleet-page.png')",
+        merchant: "url('/src/images/bg/restaurent-page.png')",
+      },
       colors: {
         primaryOrange: "rgba(236, 97, 49, 1)",
         lightGray: "rgba(246, 246, 246, 1)",
