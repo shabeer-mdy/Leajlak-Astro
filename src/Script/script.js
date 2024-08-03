@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   function setActiveItem() {
-    const currentRoute = window.location.pathname;
+    const currentRoute = window.location.pathname.replace(/\/$/, "");
     console.log(currentRoute);
     navItems.forEach((item) => {
       const itemRoute = item.getAttribute("data-route");

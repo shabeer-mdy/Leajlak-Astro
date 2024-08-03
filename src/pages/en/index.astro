@@ -35,6 +35,7 @@ import Payment from "../../images/icons/benefits/integration/order-return.png";
 import truck from "../../images/icons/path-truck 1.png";
 import google from "../../images/icons/google play.png";
 import apple from "../../images/icons/apple store.png";
+import CarouselThreeD from "../../components/CarouselThreeD.astro";
 ---
 
 <Layout title="Home" lang="en">
@@ -117,12 +118,51 @@ import apple from "../../images/icons/apple store.png";
       </div>
     </div>
   </section>
+  <section id="WhoWeServe" class="bg-white">
+    <div class="container section-container flex flex-col items-center gap-20">
+      <h3>Who we serve?</h3>
+      <div class="flex flex-col items-center gap-y-24">
+        <div class="flex flex-col items-center gap-10 md:flex-row w-full">
+          <div class="md:w-[30%] space-y-2 justify-self-start">
+            <h2>Target Sectors</h2>
+            <p>
+              Our services target multiple sectors, from restaurants and cafes
+              to e-groceries and much more.
+            </p>
+          </div>
+          <div class="relative md:w-[70%]"><CarouselThreeD /></div>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-10 md:flex-row">
+          <div class="md:w-[30%] space-y-2 md:order-2">
+            <div>
+              <h2>Our Service Ecosystem</h2>
+            </div>
+            <p>
+              Explore how our platform connects these key players, enhancing
+              every step of the delivery journey and driving success across the
+              supply chain.
+            </p>
+          </div>
+          <div class="md:w-[70%] relative">
+            <video
+              autoplay
+              muted
+              loop
+              src="/leajlak workflow.mp4"
+              class="relative w-full h-full">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="Benfits">
     <div
       class="container section-container flex flex-col justify-center items-center gap-20">
       <div class="flex flex-col text-left md:text-center space-y-2 md:w-[60%]">
         <h3 class="tracking-xl">Benfits</h3>
-        <h2 class="text-xl md:text-2xl">
+        <h2 class="text-lg md:text-2xl">
           Bridging Merchants and Logistics Companies for a Seamless Delivery
           Ecosystem
         </h2>
@@ -133,7 +173,7 @@ import apple from "../../images/icons/apple store.png";
         <div
           class="relative flex flex-col lg:flex-row justify-center items-center duration-200 lg:space-x-10">
           <div
-            class="bg-[url('/src/images/bg/restaurant-mobile.png')] bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%]">
+            class="bg-[url('/src/images/bg/restaurant-mobile.png')] bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl">
             <div>
               <div
                 class="text-primaryOrange text-lg font-medium tracking-xl uppercase">
@@ -600,7 +640,7 @@ import apple from "../../images/icons/apple store.png";
                 <span>Integration Capabilities</span>
               </li>
             </ul>
-            <div class="sm:inline-flex sm:gap-x-2 space-y-2 sm:space-y-0">
+            <div class="inline-flex gap-x-2">
               <a
                 href="/solutions/merchant-solutions"
                 class="inline-flex items-center justify-center text-base bg-primaryOrange px-4 py-3 rounded-md text-white">
@@ -644,7 +684,7 @@ import apple from "../../images/icons/apple store.png";
             />
           </div>
           <div
-            class="bg-[url('/src/images/bg/fleet-mobile.png')] bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%]">
+            class="bg-[url('/src/images/bg/fleet-mobile.png')] bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl">
             <div>
               <div
                 class="text-primaryOrange text-lg font-medium tracking-xl uppercase">
@@ -1331,7 +1371,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
                 <span>Centralized dashboard and app</span>
               </li>
             </ul>
-            <div class="sm:inline-flex sm:gap-x-2 space-y-2 sm:space-y-0">
+            <div class="inline-flex gap-x-2">
               <a
                 href="/solutions/3PL-solutions"
                 class="inline-flex items-center justify-center text-base bg-primaryOrange px-4 py-3 rounded-md text-white">
@@ -1358,7 +1398,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
       </div>
     </div>
   </section>
-  <section id="Integration">
+  <section id="Integration" class="bg-white">
     <div class="container section-container space-y-20">
       <div class="text-center space-y-1">
         <h2>Core features</h2>

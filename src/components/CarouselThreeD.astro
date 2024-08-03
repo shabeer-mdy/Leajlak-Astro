@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import restaurant from "../images/carousel/restaurant.png";
+import cafe from "../images/carousel/cafe.png";
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".item");
+    let currentIndex = 0;
+
+    const updateClasses = () => {
+      items.forEach((item, index) => {
+        item.classList.remove("active", "left", "right", "behind");
+        if (index === currentIndex) {
+          item.classList.add("active");
+        } else if (index === (currentIndex + 1) % items.length) {
+          item.classList.add("right");
+        } else if (index === (currentIndex - 1 + items.length) % items.length) {
+          item.classList.add("left");
+        } else {
+          item.classList.add("behind");
+        }
+      });
+    };
+
+    updateClasses();
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateClasses();
+    }, 3000); // Change slide every 3 seconds
+  });
+</script>
+
+<div class="flex items-center justify-center h-96 relative">
+  <Image src={cafe} alt="restaurant" class="item active" data-index="1" />
+  <Image src={restaurant} alt="restaurant" class="item left" data-index="2" />
+  <Image src={cafe} alt="restaurant" class="item right" data-index="3" />
+  <Image src={restaurant} alt="restaurant" class="item behind" data-index="4" />
+  <Image src={cafe} alt="restaurant" class="item behind" data-index="5" />
+  <Image src={restaurant} alt="restaurant" class="item behind" data-index="6" />
+</div>
