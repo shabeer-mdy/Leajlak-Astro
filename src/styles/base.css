@@ -416,7 +416,7 @@ label {
 }
 
 .item {
-  @apply size-44 opacity-0 absolute transition-all ease-in-out duration-300  z-0 rounded-xl bg-contain sm:h-60 sm:w-64 md:w-80;
+  @apply size-44 opacity-0 absolute transition-all ease-in-out duration-300  z-0 rounded-xl bg-contain shadow-xl sm:h-60 sm:w-64 md:w-80;
 }
 
 .item.active {
