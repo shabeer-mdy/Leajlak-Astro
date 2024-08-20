@@ -12,45 +12,31 @@ import cafe from "../images/carousel/cafe.png";
     let currentIndex = 0;
     let interval;
 
-    const updateClasses = (direction) => {
+    const updateClasses = () => {
       items.forEach((item, index) => {
+        /*  console.log(`Current Index: ${currentIndex}`); */
         item.classList.remove("active", "left", "right", "behind");
         if (index === currentIndex) {
           item.classList.add("active");
-        } else if (direction === "next") {
-          if (index === (currentIndex + 1) % items.length) {
-            item.classList.add("right");
-          } else if (
-            index ===
-            (currentIndex - 1 + items.length) % items.length
-          ) {
-            item.classList.add("left");
-          } else {
-            item.classList.add("behind");
-          }
-        } else if (direction === "prev") {
-          if (index === (currentIndex + 1) % items.length) {
-            item.classList.add("right");
-          } else if (
-            index ===
-            (currentIndex - 1 + items.length) % items.length
-          ) {
-            item.classList.add("left");
-          } else {
-            item.classList.add("behind");
-          }
+        } else if (index === (currentIndex + 1) % items.length) {
+          item.classList.add("right");
+        } else if (index === (currentIndex - 1 + items.length) % items.length) {
+          item.classList.add("left");
+        } else {
+          item.classList.add("behind");
         }
+        /*         console.log(`Index: ${index}, Class: ${item.className}`); */
       });
     };
 
     const nextSlide = () => {
       currentIndex = (currentIndex + 1) % items.length;
-      updateClasses("next");
+      updateClasses();
     };
 
     const prevSlide = () => {
       currentIndex = (currentIndex - 1 + items.length) % items.length;
-      updateClasses("prev");
+      updateClasses();
     };
 
     const resetInterval = () => {
@@ -68,55 +54,30 @@ import cafe from "../images/carousel/cafe.png";
       resetInterval();
     });
 
-    // Initialize the carousel
     interval = setInterval(nextSlide, 5000);
-    updateClasses("next");
+    updateClasses();
   });
 </script>
 <div class="flex items-center justify-center h-96 relative">
-  <Image src={cafe} alt="restaurant" class="item active" data-index="1" />
-  <Image src={restaurant} alt="restaurant" class="item left" data-index="2" />
-  <Image src={cafe} alt="restaurant" class="item right" data-index="3" />
-  <Image src={restaurant} alt="restaurant" class="item behind" data-index="4" />
-  <Image src={cafe} alt="restaurant" class="item behind" data-index="5" />
-  <Image src={restaurant} alt="restaurant" class="item behind" data-index="6" />
+  <Image src={cafe} alt="cafe" class="item active" />
+  <Image src={restaurant} alt="restaurant" class="item right" />
+  <Image src={cafe} alt="cafe" class="item left" />
+  <Image src={restaurant} alt="restaurant" class="item behind" />
+  <Image src={cafe} alt="cafe" class="item behind" />
+  <Image src={restaurant} alt="restaurant" class="item behind" />
 </div>
 <div
-  class="absolute bottom-5 sm:-bottom-5 left-0 right-0 flex items-center justify-center gap-20">
+  class="absolute -bottom-5 sm:-bottom-16 left-0 right-0 flex items-center justify-center gap-20">
   <button id="prev">
-    <svg
-      class="size-6 rotate-180 hover:-translate-x-2 duration-300 active:fill-primaryOrange"
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 330 330"
-      xml:space="preserve">
-      <path
-        id="XMLID_222_"
-        d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
-        c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
-        C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
-        C255,161.018,253.42,157.202,250.606,154.389z"
-      ></path>
-    </svg>
+    <div
+      class="text-2xl active:text-primaryOrange lg:hover:text-primaryOrange lg:hover:scale-125 duration-300">
+      ❮
+    </div>
   </button>
   <button id="next">
-    <svg
-      class="size-6 hover:translate-x-2 duration-300 active:fill-primaryOrange"
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 330 330"
-      xml:space="preserve">
-      <path
-        id="XMLID_222_"
-        d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
-      c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
-      C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
-      C255,161.018,253.42,157.202,250.606,154.389z"
-      ></path>
-    </svg>
+    <div
+      class="text-2xl active:text-primaryOrange lg:hover:text-primaryOrange lg:hover:scale-125 duration-300">
+      ❯
+    </div>
   </button>
 </div>

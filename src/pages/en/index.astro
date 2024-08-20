@@ -90,7 +90,7 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
   </div>
   <section id="Headline1" class="overflow-x-hidden">
     <div
-      class="container section-container flex flex-col md:flex-row lg:items-center justify-center space-x-5">
+      class="container section-container relative flex flex-col justify-center gap-10 lg:flex-row lg:items-center lg:justify-start lg:h-screen">
       <div
         class="flex flex-col justify-center space-y-8 lg:max-w-[50%] text-base">
         <div class="space-y-3">
@@ -113,7 +113,8 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
           <Button link="/en/register" text="Register now" />
         </div>
       </div>
-      <div class="hidden sm:flex md:max-w-[50%]">
+      <div
+        class="lg:absolute lg:right-0 hidden sm:flex sm:justify-center lg:justify-start lg:max-w-[50%]">
         <Image src={mockup} class="w-[770px]" alt="mockup" loading="eager" />
       </div>
     </div>
@@ -122,7 +123,7 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
     <div
       class="container section-container flex flex-col gap-20 overflow-hidden">
       <h3 class="text-left md:text-center">Who we serve?</h3>
-      <div class="flex flex-col items-center gap-y-24">
+      <div class="flex flex-col items-center gap-y-32">
         <div class="flex flex-col items-center gap-10 md:flex-row w-full">
           <div class="md:w-[30%] space-y-2 justify-self-start">
             <h2>Target Sectors</h2>
@@ -131,7 +132,7 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
               to e-groceries and much more.
             </p>
           </div>
-          <div class="relative md:w-[70%]"><CarouselThreeD /></div>
+          <div class="relative w-full md:w-[70%]"><CarouselThreeD /></div>
         </div>
         <div
           class="flex flex-col items-center justify-center gap-10 md:flex-row">
