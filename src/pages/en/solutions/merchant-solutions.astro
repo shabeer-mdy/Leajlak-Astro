@@ -9,8 +9,10 @@ import { Image } from "astro:assets";
 ---
 
 <Layout title="Solutions | Merchants" lang="en">
-  <section class="bg-merchant bg-cover bg-no-repeat bg-fixed">
-    <div class="container section-container flex items-center justify-center">
+  <section
+    class="bg-merchant bg-cover bg-no-repeat bg-fixed"
+    id="merchants-hero">
+    <div class="container section-container hero">
       <h1 class="py-16 text-white text-3xl md:text-4xl text-center md:w-[90%]">
         Innovative Order Management System for Merchants
       </h1>
@@ -625,9 +627,8 @@ c161 177 308 330 324 340 37 23 64 24 92 1z m-2588 -2242 c87 -343 267 -546
       </div>
     </div>
   </section>
-  <section id="Solutions-cta">
-    <div
-      class="container section-container flex flex-col items-center justify-evenly text-center space-y-10">
+  <div id="Solutions-cta">
+    <div class="container section-container cta text-center gap-10">
       <h1 class="text-2xl lg:text-4xl lg:w-[50%]">
         Boost Customer Loyalty with Reliable Deliveries.
       </h1>
@@ -638,7 +639,7 @@ c161 177 308 330 324 340 37 23 64 24 92 1z m-2588 -2242 c87 -343 267 -546
         Join now
       </a>
     </div>
-  </section>
+  </div>
   <section>
     <div class="container section-container flex flex-col gap-24">
       <h2 class="text-center">Don't Take Our Word For It</h2>

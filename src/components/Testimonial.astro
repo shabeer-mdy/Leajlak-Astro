@@ -6,7 +6,7 @@ import profile_pic from "../images/profile-pic/profile_pic.png";
 
 <div class=`carousel-item ${active}`>
   <svg
-    class="w-10 h-10 mx-auto mb-3 text-primaryOrange"
+    class="size-6 sm:size-10 lg:size-12 mx-auto mb-3 text-primaryOrange"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
@@ -16,15 +16,19 @@ import profile_pic from "../images/profile-pic/profile_pic.png";
     ></path>
   </svg>
   <blockquote>
-    <p class="text-xl md:text-2xl italic font-medium text-black">{quote}</p>
+    <p class="text-xl md:text-3xl italic font-medium text-black">{quote}</p>
   </blockquote>
   <figure>
     <figcaption class="flex items-center justify-center mt-6 gap-x-3">
-      <Image class="w-8 h-8 rounded-full" src={profile_pic} alt={img_alt} />
+      <Image
+        class="size-8 sm:size-10 lg:size-14 rounded-full"
+        src={profile_pic}
+        alt={img_alt}
+      />
       <div class="flex items-center">
-        <cite class="pe-3 font-medium">{name}</cite>
-        <span>|</span>
-        <cite class="ps-3 text-sm font-light">{position}</cite>
+        <cite class="pe-3 font-medium lg:text-xl">{name}</cite>
+        <span class="lg:text-xl">|</span>
+        <cite class="ps-3 text-sm lg:text-lg font-light">{position}</cite>
       </div>
     </figcaption>
   </figure>

@@ -27,10 +27,31 @@ body {
   overflow-x: hidden;
 }
 
-.section-container {
-  @apply relative max-w-7xl mx-auto px-6 lg:px-16 2xl:px-5 py-24 min-h-full;
+section:not(
+    .home-cta,
+    #about-hero,
+    #about,
+    #mission,
+    #vision,
+    #contact-hero,
+    #map,
+    #merchants-hero,
+    #PL-hero,
+    #register-hero,
+    #hero
+  ) {
+  @apply lg:min-h-screen flex;
 }
 
+.section-container {
+  @apply relative max-w-7xl mx-auto px-6 lg:px-16 2xl:px-5 py-24;
+}
+.hero {
+  @apply h-[600px] flex items-center justify-center;
+}
+.cta {
+  @apply h-[400px] flex items-center flex-col justify-evenly;
+}
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -172,7 +193,7 @@ header.scrolled div {
 }
 
 .button {
-  @apply relative border-2 border-primaryOrange text-primaryOrange rounded-md px-5 py-2 hover:bg-primaryOrange hover:text-white duration-200;
+  @apply relative border-2 border-primaryOrange text-primaryOrange rounded-md px-5 py-2  before:bg-primaryOrange hover:text-white hover:before:w-full before:duration-300 before:-z-10 before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0  duration-300;
 }
 
 a:hover #arrow {
@@ -225,12 +246,12 @@ a:hover #arrow {
 }
 
 .carousel-controls {
-  @apply absolute top-1/2 w-full flex justify-between;
+  @apply absolute bottom-0 sm:bottom-auto w-full flex justify-between;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  @apply text-2xl p-3 cursor-pointer hover:scale-125 duration-500;
+  @apply text-3xl p-3 cursor-pointer hover:scale-110 duration-300;
 }
 
 /* Customers */
@@ -416,7 +437,7 @@ label {
 }
 
 .item {
-  @apply opacity-0 absolute transition-all ease-in-out duration-500 z-0 rounded-xl shadow-2xl w-full h-80 sm:size-72 lg:size-80;
+  @apply opacity-0 absolute transition-all ease-in-out duration-500 z-0 rounded-xl  w-full h-80 sm:w-72 sm:h-60 lg:w-80 lg:h-64 sm:shadow-2xl;
 }
 
 .item.active {

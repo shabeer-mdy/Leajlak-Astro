@@ -40,7 +40,7 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
 
 <Layout title="Home" lang="en">
   <Carousel />
-  <section class="relative min-h-screen">
+  <section class="relative h-screen">
     <video
       autoplay
       muted
@@ -51,7 +51,7 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
     <div
       class="w-full h-full absolute inset-0 bg-gradient-to-t md:bg-gradient-to-br bg-black/80">
       <div
-        class="container section-container flex flex-col justify-center text-center gap-5">
+        class="container section-container flex flex-col justify-center text-center gap-5 h-full">
         <div class="flex flex-col lg:items-center text-white">
           <div class="space-y-1 mb-5">
             <div class="text-3xl lg:text-5xl">Streamline Your Deliveries,</div>
@@ -88,11 +88,10 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
       <LogoItems imgSrc={Mcdonald} alt="image" />
     </div>
   </div>
-  <section id="Headline1" class="overflow-x-hidden">
+  <section id="Headline1" class="overflow-x-hidden flex">
     <div
-      class="container section-container relative flex flex-col justify-center gap-10 lg:flex-row lg:items-center lg:justify-start lg:h-screen">
-      <div
-        class="flex flex-col justify-center space-y-8 lg:max-w-[50%] text-base">
+      class="container section-container relative flex flex-col justify-center gap-10 lg:flex-row lg:items-center lg:justify-start">
+      <div class="flex flex-col justify-center space-y-8 lg:w-[50%] text-base">
         <div class="space-y-3">
           <div>
             <h3 class="tracking-widest">Who we are?</h3>
@@ -114,8 +113,13 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
         </div>
       </div>
       <div
-        class="lg:absolute lg:right-0 hidden sm:flex sm:justify-center lg:justify-start lg:max-w-[50%]">
-        <Image src={mockup} class="w-[770px]" alt="mockup" loading="eager" />
+        class="lg:absolute lg:right-0 hidden sm:flex sm:justify-center lg:justify-start lg:w-[50%]">
+        <Image
+          src={mockup}
+          class="w-[770px] lg:w-[870px]"
+          alt="mockup"
+          loading="eager"
+        />
       </div>
     </div>
   </section>
@@ -1401,7 +1405,8 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
     </div>
   </section>
   <section id="Integration" class="bg-white">
-    <div class="container section-container space-y-20">
+    <div
+      class="container section-container flex flex-col items-center justify-center space-y-20">
       <div class="text-center space-y-1">
         <h2>Core features</h2>
       </div>
@@ -1536,7 +1541,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
   <section
     class="bg-[url('../images/bg/digital-bg1.png')] bg-no-repeat bg-cover bg-fixed">
     <div
-      class="section-container flex flex-col justify-center items-center text-center">
+      class="container section-container flex flex-col justify-evenly items-center text-center">
       <h2>Hear from Our Happy Clients</h2>
       <!-- Carousel -->
       <div class="carousel">

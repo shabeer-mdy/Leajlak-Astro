@@ -10,15 +10,18 @@ import Typewriter from "../../components/Typewriter.astro";
 
 <Layout title="About Us" lang="en">
   <Typewriter />
-  <section class="bg-darkGray">
-    <div class="container section-container text-white">
-      <div class="py-10 text-left md:text-center">
+  <section class="bg-darkGray" id="about-hero">
+    <div class="container section-container hero text-white">
+      <div class="py-10 text-left md:text-center space-y-5">
         <h4
           class="text-primaryOrange text-2xl md:text-4xl font-light tracking-xl">
           About us
         </h4>
         <h1 class="text-4xl md:text-5xl md:leading-relaxed">
-          Connecting Merchants and Logistics Providers <span
+          Connecting Merchants and Logistics Providers <br
+            class="hidden 2xl:block"
+          />
+          <span
             class="typewrite text-primaryOrange"
             data-period="2000"
             data-type='[ "Seamlessly.", "smoothly.", "efficiently.", "like never before!" ]'>
@@ -28,7 +31,7 @@ import Typewriter from "../../components/Typewriter.astro";
       </div>
     </div>
   </section>
-  <section class="bg-white">
+  <section class="bg-white" id="about">
     <div class="container section-container">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
@@ -45,7 +48,7 @@ import Typewriter from "../../components/Typewriter.astro";
       </div>
     </div>
   </section>
-  <section>
+  <section id="mission">
     <div class="container section-container lg:h-96">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
@@ -71,7 +74,7 @@ import Typewriter from "../../components/Typewriter.astro";
       </div>
     </div>
   </section>
-  <section class="bg-white">
+  <section class="bg-white" id="vision">
     <div class="container section-container lg:h-96">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">

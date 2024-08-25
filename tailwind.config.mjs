@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         logistic: "url('/src/images/bg/fleet-page.png')",
+        logistic_mobile: "url('/src/images/bg/fleet-page-mobile.png')",
         merchant: "url('/src/images/bg/restaurent-page.png')",
       },
       colors: {
