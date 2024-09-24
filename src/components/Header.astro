@@ -4,7 +4,7 @@ const { lang = "en" } = Astro.props;
 import { Image } from "astro:assets";
 import logo_white from "../images/logo 2 white.png";
 import logo_normal from "../images/logo 2.png";
-import english from "../images/flag/united-states.png";
+import english from "../images/flag/uk.png";
 import arabic from "../images/flag/2027810-middle.png";
 const content = await import(`../data/${lang}.json`);
 const handleRedirect = (lang: string) => {
@@ -18,8 +18,9 @@ const handleRedirect = (lang: string) => {
 
 <header id="header">
   <div
-    class="relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-16 2xl:px-5 h-16 lg:justify-between">
-    <a href="/en">
+    class="notshow relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-16 2xl:px-5 h-16 lg:justify-between"
+    data-animation="animate-fade animate-duration-[1500ms]">
+    <a href=`/${lang}`>
       <Image
         loading="eager"
         id="logo-default"
@@ -51,7 +52,7 @@ const handleRedirect = (lang: string) => {
       </div>
       <!-- Dropdown menu -->
       <div
-        class="relative nav_item gap-2 items-center lg:justify-center cursor-pointer group"
+        class="relative nav_item gap-2 items-center lg:justify-center cursor-pointer"
         id="dropdownHoverButton">
         <div
           class="inline-flex items-center gap-2 group-hover:text-primaryOrange">
@@ -74,17 +75,17 @@ const handleRedirect = (lang: string) => {
         </div>
         <div
           id="dropdownHover"
-          class="lg:absolute z-50 top-16 -left-1/2 hidden lg:flex lg:invisible lg:bg-white lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:shadow w-44 overflow-hidden">
+          class="max-h-0 ease-out duration-500 z-50 top-16 -left-1/2 overflow-hidden w-44 lg:opacity-0 lg:duration-300 lg:invisible lg:max-h-max lg:absolute lg:flex lg:bg-white lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:shadow">
           <ul
             class="text-sm text-gray-700 lg:px-4 lg:py-5 lg:space-y-4 space-y-2 mt-2 lg:mt-0">
-            <li class="lg:-translate-y-1/2 lg:opacity-0">
+            <li class="lg:-translate-y-1/2 lg:opacity-0 duration-500">
               <a
                 href={`/${lang}/solutions/merchant-solutions`}
                 data-route={`/${lang}/solutions/merchant-solutions`}
                 aria-label="merchants">{content.for_merchants}</a
               >
             </li>
-            <li class="lg:-translate-y-1/2 lg:opacity-0 lg:delay-75">
+            <li class="lg:-translate-y-1/2 lg:opacity-0 duration-500">
               <a
                 href={`/${lang}/solutions/logistic-solutions`}
                 data-route={`/${lang}/solutions/logistic-solutions`}
@@ -139,7 +140,7 @@ const handleRedirect = (lang: string) => {
           }
         </button>
         <div
-          class="z-50 lg:absolute invisible opacity-0 lg:top-16 lg:-right-6 w-48 text-base list-none lg:bg-white rounded-lg lg:shadow"
+          class="z-50 lg:absolute invisible opacity-0 lg:top-16 lg:-right-6 w-48 text-base list-none lg:bg-white rounded-lg lg:shadow duration-300"
           id="language-dropdown-menu">
           <ul class="font-medium text-black py-5 lg:px-4 space-y-4" role="none">
             {

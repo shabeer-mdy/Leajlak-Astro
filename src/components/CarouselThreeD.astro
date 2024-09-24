@@ -2,6 +2,9 @@
 import { Image } from "astro:assets";
 import restaurant from "../images/carousel/restaurant.png";
 import cafe from "../images/carousel/cafe.png";
+import family from "../images/carousel/productive-family.png";
+import onlineStores from "../images/carousel/online-stores.png";
+import pharmacy from "../images/carousel/pharmacy.png";
 ---
 
 <script>
@@ -59,12 +62,31 @@ import cafe from "../images/carousel/cafe.png";
   });
 </script>
 <div class="flex items-center justify-center h-96 relative">
-  <Image src={cafe} alt="cafe" class="item active" />
-  <Image src={restaurant} alt="restaurant" class="item right" />
-  <Image src={cafe} alt="cafe" class="item left" />
-  <Image src={restaurant} alt="restaurant" class="item behind" />
-  <Image src={cafe} alt="cafe" class="item behind" />
-  <Image src={restaurant} alt="restaurant" class="item behind" />
+  <div class="item first">
+    <h4 class="text-white text-xl absolute top-2 left-2">Café</h4>
+    <Image src={cafe} alt="cafe" class="size-full" />
+  </div>
+  <div class="item left">
+    <h4 class="text-white text-xl absolute bottom-2 left-2">Restaurant</h4>
+    <Image src={restaurant} alt="restaurant" class="size-full" />
+  </div>
+  <div class="item right">
+    <h4 class="text-white text-xl absolute bottom-2 left-2">
+      Productive Families
+    </h4>
+    <Image src={family} alt="cafe" class="size-full" />
+  </div>
+  <div class="item behind">
+    <h4 class="text-white text-xl absolute bottom-2 left-2">Online Stores</h4>
+    <Image src={onlineStores} alt="restaurant" class="size-full" />
+  </div>
+  <div class="item behind">
+    <h4 class="text-white text-xl absolute bottom-2 left-2">pharmacy</h4>
+    <Image src={pharmacy} alt="cafe" class="size-full" />
+  </div>
+  <div class="item behind">
+    <Image src={restaurant} alt="restaurant" class="size-full" />
+  </div>
 </div>
 <div
   class="absolute -bottom-5 sm:-bottom-10 left-0 right-0 flex items-center justify-center gap-20">

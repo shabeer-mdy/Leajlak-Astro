@@ -133,7 +133,7 @@ header.scrolled div {
 }
 
 #dropdownHoverButton.active #dropdownHover {
-  @apply visible flex;
+  @apply flex max-h-52 ease-in duration-500 lg:visible lg:opacity-100 lg:duration-300;
 }
 
 #dropdownHoverButton.active svg {
@@ -148,16 +148,20 @@ header.scrolled div {
   @apply text-primaryOrange;
 }
 
+#dropdownHoverButton.active #dropdownHover li {
+  @apply lg:translate-y-0 lg:opacity-100 ease-out duration-500;
+}
+
+#dropdownHoverButton.active #dropdownHover li:last-child {
+  @apply delay-200;
+}
+
 #language-dropdown-menu.active li {
   @apply lg:translate-y-0 lg:opacity-100 ease-out duration-500;
 }
 
 #language-dropdown-menu.active {
   @apply visible opacity-100;
-}
-
-#dropdownHoverButton.active #dropdownHover li {
-  @apply lg:translate-y-0 lg:opacity-100 ease-out duration-500;
 }
 
 .menu-toggle {
@@ -437,9 +441,8 @@ label {
 }
 
 .item {
-  @apply opacity-0 absolute transition-all ease-in-out duration-500 z-0 rounded-xl  w-full h-80 sm:w-72 sm:h-60 lg:w-80 lg:h-64 sm:shadow-2xl;
+  @apply opacity-0 absolute transition-all ease-in-out duration-500 z-0 rounded-xl  w-full h-80 sm:w-72 sm:h-60 lg:w-80 lg:h-64 sm:shadow-2xl overflow-hidden;
 }
-
 .item.active {
   @apply opacity-100 sm:scale-125 translate-x-0 z-10;
 }
@@ -451,4 +454,8 @@ label {
 }
 .item.behind {
   @apply invisible;
+}
+
+.notshow {
+  @apply opacity-0;
 }
