@@ -36,6 +36,10 @@ import truck from "../../images/icons/path-truck 1.png";
 import google from "../../images/icons/google play.png";
 import apple from "../../images/icons/apple store.png";
 import CarouselThreeD from "../../components/CarouselThreeD.astro";
+
+import testimonials from "../../data/testimonial.json";
+import clients from "../../data/clients.json";
+
 ---
 
 <Layout title="Home" lang="en">
@@ -77,17 +81,7 @@ import CarouselThreeD from "../../components/CarouselThreeD.astro";
       <span class="text-primaryOrange font-semibold">Leajlak's</span> empowered brands
     </h4>
     <div class="logo-track">
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
-      <LogoItems imgSrc={Mcdonald} alt="image" />
+      {clients.map((client) => <LogoItems imgSrc={client.image} alt="image" /> )}
     </div>
   </div>
   <section id="Headline1" class="overflow-x-hidden flex">
@@ -1550,23 +1544,8 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
       class="container section-container flex flex-col justify-evenly items-center text-center">
       <h2>Hear from Our Happy Clients</h2>
       <!-- Carousel -->
-      <div class="carousel">
-        <Testimonial
-          active="active"
-          quote="Hello this is Testimonial component test"
-          name="Malek"
-          position="Dev"
-          img_src="/src/images/profile-pic/unsplash_C8Ta0gwPbQg.png"
-          img_alt="test"
-        />
-        <Testimonial
-          active=""
-          quote="eazeazezae"
-          name="ezaeaz"
-          position="Dev"
-          img_src="/src/images/profile-pic/unsplash_C8Ta0gwPbQg.png"
-          img_alt="test"
-        />
+      <div class="carousel" transition:animate="slide">
+       {testimonials.map((data, index) => <Testimonial active={index == 0 ? 'active' : ''} quote={data.testimonial} name={data.name}/> )}
         <div class="carousel-controls">
           <div class="carousel-control-prev">❮</div>
           <div class="carousel-control-next">❯</div>

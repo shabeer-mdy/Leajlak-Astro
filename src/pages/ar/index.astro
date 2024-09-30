@@ -35,6 +35,9 @@ import Payment from "../../images/icons/benefits/integration/order-return.png";
 import truck from "../../images/icons/path-truck 1.png";
 import google from "../../images/icons/google play.png";
 import apple from "../../images/icons/apple store.png";
+
+import testimonials from "../../data/testimonial.json"
+import clients from "../../data/clients.json"
 ---
 
 <Layout title="الصفحة الرئيسية" lang="ar">
@@ -77,17 +80,9 @@ import apple from "../../images/icons/apple store.png";
       </span>
     </h4>
     <div class="logo-track" dir="ltr">
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
-      <LogoItems imgSrc={Mcdonald} alt="صورة" />
+      <div class="logo-track">
+        {clients.map((client) => <LogoItems imgSrc={client.image} alt="image" /> )}
+      </div>
     </div>
   </div>
   <section id="Headline1" class="overflow-x-hidden">
@@ -1469,22 +1464,7 @@ c571 0 576 0 603 49 13 26 14 790 0 825 -5 14 -24 35 -42 46 -32 19 -50 20
       <h2>استمع إلى عملائنا السعداء</h2>
       <!-- Carousel -->
       <div class="carousel">
-        <Testimonial
-          active="active"
-          quote="مرحبًا، هذا اختبار لمكون الشهادات"
-          name="مالك"
-          position="مطوّر"
-          img_src="/src/images/profile-pic/unsplash_C8Ta0gwPbQg.png"
-          img_alt="test"
-        />
-        <Testimonial
-          active=""
-          quote="تجربة"
-          name="تجربة"
-          position="مطوّر"
-          img_src="/src/images/profile-pic/unsplash_C8Ta0gwPbQg.png"
-          img_alt="test"
-        />
+       {testimonials.map((data, index) => <Testimonial active={index == 0 ? 'active' : ''} quote={data.testimonial} name={data.name}/> )}
         <div class="carousel-controls">
           <div class="carousel-control-prev">❮</div>
           <div class="carousel-control-next">❯</div>

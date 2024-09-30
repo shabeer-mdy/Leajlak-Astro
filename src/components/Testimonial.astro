@@ -1,7 +1,7 @@
 ---
-const { quote, name, position, img_alt, active } = Astro.props;
+const { quote, name, position, active, profile_pic } = Astro.props;
 import { Image } from "astro:assets";
-import profile_pic from "../images/profile-pic/profile_pic.png";
+import default_image from "../images/profile-pic/profile_pic.png";
 ---
 
 <div class=`carousel-item ${active}`>
@@ -20,15 +20,14 @@ import profile_pic from "../images/profile-pic/profile_pic.png";
   </blockquote>
   <figure>
     <figcaption class="flex items-center justify-center mt-6 gap-x-3">
-      <Image
-        class="size-8 sm:size-10 lg:size-14 rounded-full"
-        src={profile_pic}
-        alt={img_alt}
-      />
+      { profile_pic && <Image class="size-8 sm:size-10 lg:size-14 rounded-full" src={profile_pic} alt={name} /> }
       <div class="flex items-center">
         <cite class="pe-3 font-medium lg:text-xl">{name}</cite>
-        <span class="lg:text-xl">|</span>
-        <cite class="ps-3 text-sm lg:text-lg font-light">{position}</cite>
+        { 
+          position && 
+          <span class="lg:text-xl">|</span>
+          <cite class="ps-3 text-sm lg:text-lg font-light">{position}</cite>
+        }
       </div>
     </figcaption>
   </figure>

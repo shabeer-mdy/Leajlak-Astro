@@ -6,6 +6,7 @@ import PartnersCard from "../../components/PartnersCard.astro";
 import Mc from "../../images/companies logo/clients/McDonald's.png";
 import TeamMember from "../../components/TeamMember.astro";
 import Typewriter from "../../components/Typewriter.astro";
+import clients from "../../data/clients.json";
 ---
 
 <Layout title="معلومات عنا" lang="ar">
@@ -111,13 +112,7 @@ import Typewriter from "../../components/Typewriter.astro";
       <h2 class="text-center">موثوق به من قبل الشركات الرائدة</h2>
       <div
         class="flex flex-row flex-wrap items-center justify-center gap-5 pb-10">
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
+        { clients.map((client) => <PartnersCard img_src={client.image} alt="mc" />)}
       </div>
       <div
         class="bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24">
