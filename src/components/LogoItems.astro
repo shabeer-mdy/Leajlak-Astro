@@ -4,10 +4,9 @@ const { imgSrc, alt } = Astro.props;
 ---
 
 <div class="logo-item">
-  <img src={imgSrc} alt="alt" srcset="" loading="lazy">
-  <!-- <Image 
-    src={imgSrc} 
-    alt={alt} 
-    inferSize={true} 
-    loading="lazy" /> -->
+  {
+    imgSrc.src ? 
+    <Image src={imgSrc} alt={alt} inferSize={true} loading="lazy" /> :
+    <img src={imgSrc} alt="alt" srcset="" loading="lazy">
+  }
 </div>
